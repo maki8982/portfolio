@@ -1,0 +1,434 @@
+//各ファイルは必ず登録済みの変数を最初に読み込みます
+//as *で読み込みファイル名を省略することができます
+@use "../global" as *;
+
+#work-page {
+    .work {
+        margin-bottom: 60px;
+        padding-top: 168px;
+        padding-bottom: 65px;
+        border-bottom: 1px solid $colorB;
+
+        @include tab {
+            margin-bottom: 145px;
+            padding-top: 397px;
+            padding-bottom: 180px;
+        }
+
+        &__ttl {
+            width: 90vw;
+            margin: 0 auto 92px;
+            font-size: 23px;
+
+            @include pc {
+                max-width: 1653px;
+                margin: 0 auto 170px;
+                font-size: 48px;
+
+            }
+        }
+
+        &__pic {
+            position: relative;
+            width: 100%;
+            margin-bottom: 33px;
+
+
+            @include pc {
+                width: 90vw;
+                max-width: 1653px;
+                margin: 0 auto 115px;
+            }
+        }
+
+        &__circle {
+            width: 23vw;
+            max-width: 175px;
+            height: 23vw;
+            max-height: 175px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.557);
+            border: 1px solid #000;
+            border-radius: 50%;
+            pointer-events: none;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 20%;
+                height: 20%;
+                background: url(../images/triangle.svg) no-repeat center center / contain;
+
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 8%;
+                left: 8%;
+                width: 85%;
+                height: 85%;
+                background: url(../images/preview.svg) no-repeat center center / contain;
+                animation: workPreview 10s linear infinite;
+            }
+        }
+
+        &__prev {
+            display: block;
+            transition: .3s;
+
+            &:hover {
+                .work__circle {
+                    scale: 1.1;
+                }
+            }
+        }
+
+        &__img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 1.777 / 1;
+            background: #000;
+        }
+
+        &__wrap {
+            @include pc {
+                width: 90vw;
+                max-width: 1653px;
+                margin: 0 auto 65px;
+                display: flex;
+            }
+        }
+
+        &__info {
+            width: 90vw;
+            margin: 0 auto 20px;
+
+            @include pc {
+                width: calc(100% * .265);
+                margin: 0;
+            }
+        }
+
+        &__data {
+            width: 90vw;
+            margin: 0 auto 55px;
+
+            @include pc {
+                width: calc(100% * .457);
+                margin: 0;
+
+            }
+        }
+
+        &__box--01 {
+            display: flex;
+            margin-bottom: 20px;
+
+            @include tab {
+                flex-direction: column;
+                margin-bottom: 25px;
+            }
+
+            @include pc {
+                width: 100%;
+                height: 160px;
+                margin-bottom: 0;
+            }
+        }
+
+        &__sub {
+            width: 22%;
+            font-weight: bold;
+            font-family: $DMfont;
+            font-size: 10px;
+            line-height: 2.5;
+
+            @include tab {
+                width: auto;
+                font-size: 17px;
+            }
+        }
+
+        &__link--01 {
+            display: block;
+            @include linkBg;
+
+            &::after {
+                content: '';
+                display: inline-block;
+                transform: translateY(5px);
+                width: 1.5rem;
+                height: 1.5rem;
+                background: url(../images/External_link.svg) center center / cover no-repeat;
+            }
+        }
+
+        &__txt {
+            font-size: 14px;
+            width: 78%;
+            overflow-wrap: break-word;
+
+            @include tab {
+                font-size: 19px;
+                padding-top: 20px;
+            }
+
+            @include pc {
+                margin-bottom: 0;
+                padding-top: 26px;
+            }
+
+            span {
+                display: block;
+
+                @include tab {
+                    display: inline-block;
+                }
+            }
+        }
+
+        &__color {
+            display: flex;
+            width: 78%;
+            height: 1.8rem;
+
+            @include pc {
+                width: 100%;
+                padding-top: 12px;
+                height: 3.5rem;
+            }
+
+            span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+
+                @include pc {
+                    width: 10.5rem;
+                    font-size: 19px;
+                }
+            }
+
+        }
+        &__wss {
+
+            &:nth-of-type(1) {
+                background: #F6F6F6;
+                color: #000;
+
+            }
+
+            &:nth-of-type(2) {
+                background: #436CD0;
+                color: #fff;
+
+            }
+
+            &:nth-of-type(3) {
+                background: #00CFFF;
+                color: #000;
+
+            }
+        }
+
+        &__hoursContainer {
+            width: 90vw;
+            margin: 0 auto 36px;
+
+            @include pc {
+                width: calc(100% * .278);
+                margin: 0;
+            }
+
+        }
+
+        &__hourTtl {
+            width: 100%;
+            font-weight: bold;
+            font-family: $DMfont;
+            font-size: 10px;
+            margin-bottom: 23px;
+            line-height: 2.5;
+
+            @include tab {
+                font-size: 17px;
+            }
+        }
+
+        &__box--02 {
+            display: flex;
+            margin-bottom: 20px;
+            font-size: 14px;
+
+            @include tab {
+                font-size: 19px;
+            }
+        }
+
+        &__hoursSub {
+            padding-right: 10px;
+
+        }
+
+        &__hoursTxt {
+            font-weight: bold;
+        }
+
+        &__comment {
+            width: 90vw;
+            margin: 0 auto;
+
+            @include pc {
+                max-width: 1653px;
+            }
+        }
+
+        &__comSub {
+            font-weight: bold;
+            font-family: $DMfont;
+            font-size: 10px;
+
+            @include tab {
+                margin-bottom: 23px;
+                font-size: 17px;
+            }
+        }
+
+        &__comTxt {
+            font-size: 14px;
+
+            @include tab {
+                font-size: 19px;
+            }
+        }
+
+        &__bottom {
+            width: 90vw;
+            margin: 0 auto 136px;
+            display: flex;
+            flex-wrap: wrap;
+
+            @include pc {
+                max-width: 1653px;
+                margin-bottom: 356px;
+            }
+        }
+
+        &__bottomWrap {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__linkTxt--01 {
+            width: 51px;
+            height: 36px;
+
+            @include tab {
+                width: 77px;
+                height: 51px;
+
+            }
+
+            @include pc {
+                width: 18.25vw;
+                height: 72px;
+            }
+        }
+
+        &__linkTxt--02 {
+            width: 170px;
+            height: 36px;
+
+            @include tab {
+                width: 270px;
+                height: 51px;
+            }
+
+            @include pc {
+                width: 18.25vw;
+                height: 72px;
+
+            }
+        }
+
+        &__linkBack,
+        &__linkNext {
+            align-items: center;
+            height: 100%;
+        }
+
+        &__linkBack {
+            @include link;
+            font-size: 17px;
+            flex-direction: row;
+
+            @include tab {
+                font-size: 25px;
+            }
+
+            @include pc {
+                font-size: 2.5vw;
+            }
+
+            &::before {
+                transform: rotate(-180deg);
+            }
+
+            &:hover::before {
+                transform: translateX(-5px) rotate(-180deg);
+            }
+        }
+
+        &__linkNext {
+            @include link;
+
+            font-size: 17px;
+
+            @include tab {
+                font-size: 25px;
+            }
+
+            @include pc {
+                font-size: 2.5vw;
+            }
+
+            &:hover::before {
+                transform: translateX(5px);
+            }
+        }
+
+        &__link--02 {
+            @include link;
+            justify-content: center;
+
+            @include pc {
+                justify-content: space-between;
+                align-self: center;
+                height: 100%;
+            }
+
+            &::before {
+                content: '';
+                display: none;
+
+                @include pc {
+                    display: block;
+                    width: 13px;
+                    height: 7px;
+                    background: url(../images/backicon.svg) center center / contain;
+                }
+            }
+        }
+    }
+}

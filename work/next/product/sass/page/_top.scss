@@ -1,0 +1,198 @@
+//各ファイルは必ず登録済みの変数を最初に読み込みます
+//as *で読み込みファイル名を省略することができます
+@use "../global" as *;
+
+
+#top {
+    .fv {
+        &__wrap {
+            position: relative;
+        }
+    }
+
+    .mv {
+        &__copy {
+            padding: 250px 80px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            font-size: 50px;
+            margin-bottom: 60px;
+
+            &::after {
+                content: 'Aiming for a new stage';
+                display: block;
+                font-size: 20px;
+                color: #ccc;
+            }
+        }
+
+        &__bg {
+            width: 100vw;
+            height: 100vh;
+            background: #999;
+        }
+    }
+
+    .about {
+        margin-bottom: 250px;
+        position: relative;
+        right: 12%;
+        z-index: 1;
+        margin-top: -17.5%;
+
+        &__container {
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 10%;
+        }
+
+        &__box {
+            &:nth-child(1) {
+                width: 700px;
+                padding: 150px 80px;
+                background: $colorB;
+                margin-bottom: 7%;
+
+                .about__txt {
+                    color: #fff;
+                }
+            }
+
+            &:nth-child(2) {
+                width: 550px;
+                align-self: flex-end;
+
+                .about__txt {
+                    position: relative;
+                    padding: 20px 0 20px 3rem;
+
+                    &::before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 3px;
+                        height: 100%;
+                        background: #000;
+
+                    }
+                }
+            }
+        }
+
+        &__ttl {
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            font-size: 35px;
+            letter-spacing: 0.1em;
+            color: #fff;
+
+            &::before {
+                content: 'About Us';
+                font-size: 12px;
+                margin-bottom: 20px;
+            }
+        }
+
+        &__sub {
+            position: relative;
+            padding: 20px 0 20px 3rem;
+            font-size: 30px;
+
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 3px;
+                height: 100%;
+                background: #E4E14C;
+
+            }
+
+            span {
+                font-size: 18px;
+            }
+        }
+
+        &__txt {
+            line-height: 2;
+
+        }
+    }
+
+    .history {
+        width: 85vw;
+        margin: 0 auto;
+        padding: 80px;
+        position: relative;
+        background: $colorB;
+
+        &::before {
+            content: 'Company';
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: block;
+        }
+
+        &__ttl {
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            font-size: 35px;
+            letter-spacing: 0.1em;
+            text-align: center;
+            color: #fff;
+
+            &::before {
+                content: 'Company History';
+                font-size: 12px;
+                margin-bottom: 20px;
+            }
+        }
+
+        &__container {
+            display: flex;
+        }
+
+        &__box {
+            width: calc(100% / 2);
+            background: #fff;
+
+            &:nth-child(1),
+            &:nth-child(2) {
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 400px;
+                }
+            }
+
+            &:nth-child(1) {
+                &::before {
+                    background: #000;
+                }
+            }
+
+            &:nth-child(2) {
+                &::before {
+                    background: #999;
+                }
+            }
+        }
+
+        &__txt,
+        &__dl {
+            padding: 50px;
+        }
+        &__txt {
+            line-height: 2;
+        }
+    }
+}

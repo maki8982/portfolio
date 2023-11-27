@@ -1,0 +1,303 @@
+//各ファイルは必ず登録済みの変数を最初に読み込みます
+//as *で読み込みファイル名を省略することができます
+@use "../global" as *;
+
+
+#about {
+    
+    .about {
+        margin-left: 140px;
+        padding: 200px 0 282px 270px;
+        background: #FAFAFA;
+        &__pic {
+           width: 100%;
+           height: 500px;
+           display: flex;
+           align-items: center;
+           background: url(../images/about.jpg) top / cover no-repeat; 
+        }
+        &__ttl {
+            padding-left: 153px;
+            font-size: 96px;
+            color: #fff;
+            letter-spacing: .1em;
+            font-family: 'Lato', sans-serif;
+            &::after {
+                content: 'WSSとは';
+                margin-top: 12px;
+                display: block;
+                font-size: 18px;
+                font-weight: normal;
+                letter-spacing: 0;
+                font-family: $notoSans;
+            }
+        }
+        &__sub {
+            margin-bottom: 78px;
+            font-size: 56px;
+            position: relative;         
+            span {
+                color: $cBlue;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                top: 28px;
+                left: -66px;
+                width: 1px;
+                height: 150px;
+                background-color: #436CD0;
+            }
+            &::after {
+                content: 'ABOUT';
+                position: absolute;
+                top: 200px;
+                left: -75px;
+                writing-mode: vertical-rl;
+                color: #436CD0;
+                font-size: 18px;
+                font-weight: normal;
+                font-family: 'Lato', sans-serif;
+            }
+        }
+        &__container {
+            display: flex;
+        }
+        &__box {
+            margin-right: 125px;
+        }
+        &__txt {
+            margin-bottom: 40px;
+            font-size: 20px;
+            line-height: 2.3;
+        }
+        &__pic--02 {
+            margin-top: -90px;
+            margin-left: -205px;
+        }
+        &__pic--03 {
+            margin-top: -130px;
+            margin-left: 480px;
+        }
+        &__mid {
+            width: 783px;
+            margin-left: 28px;
+            margin-top: -415px;
+            font-size: 160px;
+            font-weight: bold;
+            color: #436CD0;
+            mix-blend-mode: multiply;
+            font-family: 'Lato', sans-serif;
+            line-height: 1.1;
+        }
+
+    }
+    .strength {
+        position: relative;
+        &__container {
+            padding-top: 143px;
+            width: 100%;
+            height: 573px;
+            background: $cBlue;
+            &::after {
+                content: '';
+                width: 100%;
+                height: 150px;
+                background: #F6F6F6;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                z-index: -1;
+            }
+        }
+        &__sub {
+            text-align: center;
+            font-size: 48px;
+            letter-spacing: .1em;
+            color: #fff;
+        }
+        &__ul {
+            width: 1502px;
+            height: 436px;
+            margin: -286px auto 0;
+            padding: 113px 207px 121px;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 50px;
+            column-gap: 105px;
+        }
+        &__list {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            font-size: 30px;
+            &:nth-of-type(1) {
+                &::before {
+                    content: '01';
+                    font-size: 65px;
+                    color: $cBlue;
+                }
+            }
+            &:nth-of-type(2) {
+                &::before {
+                    content: '02';
+                    font-size: 65px;
+                    color: $cBlue;
+                }
+            }
+            &:nth-of-type(3) {
+                &::before {
+                    content: '03';
+                    font-size: 65px;
+                    color: $cBlue;
+                }
+            }
+            &:nth-of-type(4) {
+                &::before {
+                    content: '04';
+                    font-size: 65px;
+                    color: $cBlue;
+                }
+            }
+        }
+    }
+
+    .school {
+        margin-bottom: 90px;
+        padding: 200px 400px;
+        background: #F6F6F6;
+        display: flex;
+        justify-content: space-between;
+        gap: 68px;
+        &__sub {
+            margin-bottom: 32px;
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: .2em;
+            line-height: 1.5;
+            color: $cBlue;
+        }
+        &__txt {
+            line-height: 2;
+        }
+    }
+
+    .course {
+        margin-left: 290px;
+        margin-bottom: 200px;
+        &__sub {
+            margin-top: 25px;
+            margin-bottom: 90px;    
+            color: $cBlue;
+            font-size: 47px;
+            font-weight: 600;
+            letter-spacing: .2em;
+            font-family: 'Lato', sans-serif;
+            &::after {
+                content: 'PC・スマホサイトデザイン科';
+                margin-top: 8px;
+                display: block;
+                font-size: 16px;
+                font-weight: normal;
+                letter-spacing: 0;
+                font-family: $notoSans;
+            }
+        }
+        &__pic {
+            width: 1369px;
+            height: 656px;
+            padding: 140px 140px 0 670px;
+            background: url(../images/about5.jpg) top / cover no-repeat;
+        }
+        &__box {
+            width: 560px;
+            background: #fff;
+            padding: 48px 40px;
+            text-align: center;
+        }
+        &__mid {
+            margin-bottom: 17px;
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: .2em;
+            color: $cBlue;
+            line-height: 1.5;
+        }
+        &__txt {
+            line-height: 2;
+        }
+        span {
+            color: $cBlue;
+        }
+        
+    }
+
+    
+    
+    .side {
+        position: fixed;
+        right: 0;
+        top: 340px;
+        z-index: 1;
+        &__ul {
+            display: flex;
+            flex-direction: column;
+        }
+        &__list {
+            width: 50px;
+            height: 160px;
+            font-size: 14px;
+            list-style-type: none;
+            letter-spacing: 0.4em;
+            &:nth-child(1) {
+                background: #60C3DC;
+                &::after {
+                    content: '';
+                }
+            }
+            &:nth-child(2) {
+                background: #436CD0;
+            }
+            
+        }
+        &__link {
+            width: 100%;
+            height: 100%;
+            writing-mode: vertical-rl;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            &:hover {
+                opacity: .5;
+            }
+        }
+
+    }
+}
+
+.square {
+    &__ttl {
+        position: relative;
+        &::before {
+            content: '';
+            width: 9px;
+            height: 9px;
+            background: #00CFFF;
+            position: absolute;
+            top: -12px;
+        }
+        &::after {
+            content: '';
+            width: 9px;
+            height: 9px;
+            background: $cBlue;
+            position: absolute;
+            top: -12px;
+            left: 9px;
+        }
+    }
+}

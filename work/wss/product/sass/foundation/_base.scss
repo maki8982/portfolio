@@ -1,0 +1,84 @@
+@charset "utf-8";
+//各ファイルは必ず登録済みの変数を最初に読み込みます
+//as *で読み込みファイル名を省略することができます
+@use "../global" as *;
+
+html {
+    scroll-padding-top: 120px;
+}
+
+body {
+	display: none;
+}
+
+.wrapper {
+    font-family: $notoSans;
+    font-size: 16px;
+}
+
+.side {
+    position: fixed;
+    right: 0;
+    top: 340px;
+    z-index: 1;
+    &__ul {
+        display: flex;
+        flex-direction: column;
+    }
+    &__list {
+        width: 50px;
+        height: 160px;
+        font-size: 14px;
+        list-style-type: none;
+        letter-spacing: 0.4em;
+        position: relative;
+        &:nth-child(1) {
+            background: #60C3DC;
+            .side__link::after {
+                content: url(../images/pdf_icon.png);
+                position: absolute;
+                bottom: 17px;
+                left: 50%;
+                transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+            }
+        }
+        &:nth-child(2) {
+            background: #436CD0;
+        }
+        
+    }
+    &__link {
+        width: 100%;
+        height: 100%;
+        writing-mode: vertical-rl;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: #fff;
+        transition: .3s;
+        &:hover {
+            opacity: .5;
+        }
+    }
+}
+
+//jquery用
+
+.gnav__link.transform {
+    color: #fff;
+}
+.header__img.headerLogoScroll.-before {
+    display : none;
+    transition: .3s;
+}
+.header__img.-after {
+    display : none;
+    transition: .3s;
+}
+.header__img.headerLogoScroll.-after {
+    display : block;
+    transition: .3s;
+}

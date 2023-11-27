@@ -1,0 +1,512 @@
+//各ファイルは必ず登録済みの変数を最初に読み込みます
+//as *で読み込みファイル名を省略することができます
+@use "../global" as *;
+
+
+#infosession {
+    .mv {
+        height: 501px;
+        background: url(../images/infosession.jpg) center center / cover no-repeat;
+        display: flex;
+        align-items: center;
+        &__copy {
+            padding-left: 153px;
+            color: #fff;
+            font-size: 96px;
+            font-weight: bold;
+            font-family: 'Lato', sans-serif;
+            letter-spacing: .1em;
+            &::after {
+                content: '説明会';
+                margin-top: 12px;
+                display: block;
+                font-size: 18px;
+                font-weight: normal;
+                letter-spacing: 0;
+                font-family: $notoSans;
+            }
+        }
+
+    }
+    .side {
+        position: fixed;
+        right: 0;
+        top: 340px;
+        z-index: 1;
+        &__ul {
+            display: flex;
+            flex-direction: column;
+        }
+        &__list {
+            width: 50px;
+            height: 160px;
+            font-size: 14px;
+            list-style-type: none;
+            letter-spacing: 0.4em;
+            &:nth-child(1) {
+                background: #60C3DC;
+                &::after {
+                    content: '';
+                }
+            }
+            &:nth-child(2) {
+                background: #436CD0;
+            }
+            
+        }
+        &__link {
+            width: 100%;
+            height: 100%;
+            writing-mode: vertical-rl;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            &:hover {
+                opacity: .5;
+            }
+        }
+
+    }
+
+    .about {
+        width: 1516px;
+        padding: 125px 0;
+        margin: 0 auto;
+        text-align: center;
+        &__txt {
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 2;
+        }
+        &__blue {
+            color: $cBlue;
+        }
+    }
+    .bg {
+        height: 400px;
+        width: 100%;
+        background: url(../images/infosession2.jpg) center center / cover no-repeat;
+    }
+
+
+
+
+
+    .overview {
+        width: 100%;
+        height: 985px;
+        background: $cWhite;
+        position: relative;
+        &__wrap {
+            width: 1368px;
+            margin: 0 auto;
+            padding: 80px 124px 90px;
+            background: #fff;
+            position: absolute;
+            top: -200px;
+            left: 276px;
+
+        }
+        &__ttl {
+            font-size: 47px;
+            font-weight: bold;
+            letter-spacing: 0.15em;
+            color: $cBlue;
+            text-align: center;
+            font-family: 'Lato', sans-serif;
+            position: relative;
+            &::before {
+                content: "";
+                display: block;
+                width: 9px;
+                height: 9px;    
+                background: $cAqua;
+                position: absolute;
+                left: 548px;
+                top: -20px;
+                bottom: 0;
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                width: 9px;
+                height: 9px;
+                background: $cBlue;
+                position: absolute;
+                left: 557px;
+                top: -20px;
+                bottom: 0;
+            }
+        }
+        &__small {
+            display: block;
+            margin-bottom: 60px;
+            padding-top: 8px;
+            font-size: 16px;
+            font-weight: normal;
+            letter-spacing: 0.08em;
+            font-family: $notoSans;
+            position: relative;
+        } 
+
+        &__dl {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &__dt {
+                width: 20%;
+                padding: 30px 0;
+                font-size: 16px;
+                font-weight: bold;
+                line-height: 2;
+                border-bottom: 2px solid $cBlue;
+        }
+        &__dd {
+                padding: 30px 0 30px 30px;
+                width: 80%;
+                font-size: 16px;
+                border-bottom: 2px solid #CFD5D8;
+                line-height: 2;
+        }
+    }
+
+    .program {
+        padding: 200px 0 125px;
+        background: $cWhite;
+        &__ttl {
+            font-size: 47px;
+            font-weight: bold;
+            letter-spacing: 0.15em;
+            color: $cBlue;
+            text-align: center;
+            font-family: 'Lato', sans-serif;
+            position: relative;
+            &::before {
+                content: "";
+                display: block;
+                width: 9px;
+                height: 9px;    
+                background: $cAqua;
+                position: absolute;
+                left: 940px;
+                top: -20px;
+                bottom: 0;
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                width: 9px;
+                height: 9px;
+                background: $cBlue;
+                position: absolute;
+                left: 949px;
+                top: -20px;
+                bottom: 0;
+            }
+        }
+        &__small {
+            display: block;
+            margin-bottom: 120px;
+            padding-top: 8px;
+            font-size: 16px;
+            font-weight: normal;
+            letter-spacing: 0.08em;
+            font-family: $notoSans;
+        } 
+
+
+        &__wrap {
+            margin-bottom: 110px;
+            padding: 0 340px;
+            display: flex;
+            align-items: center;
+        }
+
+        &__inner {
+            width: 665px;
+            height: 320px;
+            padding: 85px 58px;
+            background: #fff;
+            position: relative;
+            flex-shrink: 0;
+            z-index: 1;
+        }
+
+        &__no--left {
+            margin-bottom: 60px;
+            display: flex;
+            align-items: center;
+            font-family: 'Lato', sans-serif;
+            font-size: 120px;
+            color: #60C3DC;
+            position: absolute;
+            top: -60px;
+            left: 50px;
+        }
+        &__no--right {
+            margin-bottom: 60px;
+            display: flex;
+            align-items: center;
+            font-family: 'Lato', sans-serif;
+            font-size: 120px;
+            color: #60C3DC;
+            position: absolute;
+            top: -60px;
+            right: 60px;
+        }
+        &__nosmall {
+            margin-left: 16px;
+            padding-right: 16px;
+            font-size: 14px;
+            letter-spacing: 0.09em;
+        }
+        &__sub {
+            margin-bottom: 25px;
+            font-size: 30px;
+            letter-spacing: 0.1em;
+            &--blue {
+                color: $cBlue;
+            }
+        }
+        &__txt {
+            font-size: 16px;
+            line-height: 2;
+        }
+        &__pic--light{
+            position: relative; 
+            left: -80px;        
+         }
+        &__pic--left{
+            position: relative;
+            right: -80px;         
+         }
+        
+     }
+
+     .reservation {
+        padding-top: 104px;
+        margin-bottom: 200px;
+        &__ttl {
+            font-size: 47px;
+            font-weight: bold;
+            letter-spacing: 0.15em;
+            color: $cBlue;
+            text-align: center;
+            font-family: 'Lato', sans-serif;
+            position: relative;
+            &::before {
+                content: "";
+                display: block;
+                width: 9px;
+                height: 9px;    
+                background: $cAqua;
+                position: absolute;
+                left: 940px;
+                top: -20px;
+                bottom: 0;
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                width: 9px;
+                height: 9px;
+                background: $cBlue;
+                position: absolute;
+                left: 949px;
+                top: -20px;
+                bottom: 0;
+            }
+        }
+        &__small {
+            display: block;
+            margin-bottom: 64px;
+            padding-top: 8px;
+            font-size: 16px;
+            font-weight: normal;
+            letter-spacing: 0.08em;
+            font-family: $notoSans;
+        } 
+
+        &__sub {
+            margin-bottom: 90px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1.9;
+            letter-spacing: 0.08em;
+         }
+         &__subTtl {
+            margin-bottom: 50px;
+            font-size: 30px;
+            font-weight: normal;
+            text-align: center;
+            letter-spacing: .1em;
+         }
+
+         &__table {
+            width: 640px;
+            margin: 0 auto 75px;
+            border-spacing: 0;
+         }
+         &__th {
+            width: 50%;
+            padding: 22px;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            font-weight: normal;
+            background: #436CD0;
+            border-top: 1px solid #000;
+            border-left: 1px solid #000;
+            border-bottom: 1px solid #000;
+            &:last-child {
+                border-right: 1px solid #000;
+            }
+        }
+         &__td {
+            width: 50%;
+            padding: 25px 20px;
+            font-size: 16px;
+            border-left: 1px solid #000;
+            border-bottom: 1px solid #000;
+            &:last-child {
+                border-right: 1px solid #000;
+            }
+            
+        }
+
+        &__form {
+            width: 1120px;
+            margin: 0 auto; 
+        }
+        &__sample {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding-bottom: 40px;
+        }
+        &__flex1 {
+            align-items: flex-start;
+        }
+        &__label {
+            width: 184px;
+            font-size: 16px;
+        }
+        &__flex2 {
+            margin-top: 20px;
+        }
+        &__flex3 {
+            margin-top: 15px;
+        }
+        &__require {
+            margin-right: 50px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            width: 60px;
+            display: inline-block;
+            text-align: center;
+            background: $cBlue;
+            color: #fff;
+            font-size: 14px;
+        }
+        &__require--n {
+            margin-right: 50px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            width: 60px;
+            display: inline-block;
+            text-align: center;
+            background: #c0c0c0;
+            color: #fff;
+            font-size: 14px;
+        }
+        &__input {
+            padding-left: 15px;
+            height: 50px;
+            width: 826px;
+            font-size: 16px;
+            background: #ededed;
+            border: none;
+        }
+        &__textarea {
+            width: 826px;
+            height: 180px;
+            border: none;
+            padding-left: 1em;
+            padding-right: 1em;
+            flex: 1;
+            font-size: 16px;
+            background: #ededed;
+        }
+
+        &__privacy {
+            padding-top: 32px;
+            margin-bottom: 50px;
+            font-size: 16px;
+            text-align: center;
+        }
+        &__check {
+            margin-bottom: 50px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+
+        &__box {
+            width: 400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            &::after {
+                content: "";
+                width: 40px;
+                height: 1px;
+                background: #fff;
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 40px;
+            }  
+        }
+        
+        &__btn {
+            width: 100%;
+            padding-top: 28px;
+            padding-bottom: 28px;
+            margin-bottom: 33px;
+            display: block;
+            letter-spacing: 0.1em;
+            background: $cBlue;
+            color: #fff;
+            font-size: 16px;
+            border: none;   
+            cursor: pointer;
+            transition: 0.3s;
+            font-family: $notoSans;
+            &:hover {
+                background: #376bdb;
+            }
+        }
+
+        &__tel {
+            font-size: 16px;
+            text-align: center;
+        }
+
+
+     }
+
+
+ }
+
+
+    
+
+    

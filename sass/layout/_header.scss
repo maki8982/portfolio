@@ -1,0 +1,404 @@
+//各ファイルは必ず登録済みの変数を最初に読み込みます
+//as *で読み込みファイル名を省略することができます
+@use "../global" as *;
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 3;
+    transition: .5s;
+    pointer-events: none;
+
+    @include pc {
+        padding: 64px 132px 64px 45px;
+    }
+
+    &__ttl {
+        width: 12vmin;
+        height: 12vmin;
+        max-width: 85px;
+        max-height: 85px;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: all;
+
+        &::before {
+            content: '';
+            display: block;
+            background: #F04B00;
+            border-radius: 50%;
+            position: absolute;
+            z-index: -1;
+            transition: .3s;
+
+            @include pc {
+                width: 5.5rem;
+                height: 5.5rem;
+            }
+        }
+
+        &:hover::before {
+            @include pc {
+                transform: scale(1.15);
+            }
+        }
+    }
+
+    &__link--01 {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 65px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        pointer-events: all;
+        transition: .3s;
+    }
+
+    &__link--02 {
+        display: none;
+
+        @include pc {
+            display: block;
+            padding: 10px;
+            font-size: 19px;
+            font-family: $DMfont;
+            text-decoration: none;
+            @include linkBg;
+        }
+    }
+
+    &__right {
+        pointer-events: all;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 18vmin;
+        max-width: 120px;
+        height: 18vmin;
+        max-height: 120px;
+        transition: .5s;
+
+        @include pc {
+            right: 50px;
+            bottom: 50px;
+        }
+    }
+
+    &__contact {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+            &::before {
+                content: '';
+                pointer-events: none;   
+
+                @include pc {
+                    display: block;
+                    position: absolute;
+                    top: -21px;
+                    right: -22px;
+                    width: 10rem;
+                    height: 10rem;
+                    background: url(../images/contact_hover.svg) center center / contain no-repeat;
+                    transform: rotate(90deg);
+                    opacity: 0;
+                    animation: contactHoverRetrun .3s forwards;
+                }
+            }
+
+            &::after {
+                content: '';
+                pointer-events: none;
+
+                @include pc {
+                    display: block;
+                    position: absolute;
+                    top: -18px;
+                    right: -19px;
+                    width: 9.5rem;
+                    height: 9.5rem;
+                    background: url(../images/contact.svg) center center / contain no-repeat;
+                    animation: contactTxtReturn .3s forwards;
+                }
+            }
+
+            &:hover::before {
+                @include pc {
+                    animation: contactHover .3s forwards;
+                }
+            }
+
+            &:hover::after {
+                @include pc {
+                    animation: contactTxt .3s forwards;
+                }
+            }
+    }
+
+    &__btn {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: 1;
+            width: 5vmin;
+            max-width: 30px;
+            height: 5vmin;
+            max-height: 30px;
+            pointer-events: none;
+            background: url(../images/paper-airplane.svg) center center / contain;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: $colorB;
+        }
+
+        &:hover::after {
+            @include pc {
+                animation: contactBtn .3s forwards;
+            }
+        }
+    }
+}
+
+.btn {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    overflow: hidden;
+    z-index: 3;
+    cursor: pointer;
+    pointer-events: all;
+
+    &__txt {
+        font-size: 11px;
+        font-family: $DMfont;
+        transition: .25s;
+
+        @include pc {
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+
+    &__close {
+        font-size: 11px;
+        font-family: $DMfont;
+        display: block;
+        position: absolute;
+        transform: translateX(-100%);
+        opacity: 0;
+        pointer-events: none;
+        transition: .25s;
+
+        @include pc {
+            font-size: 19px;
+            font-weight: bold;
+        }
+    }
+
+
+    &__border {
+        position: relative;
+        width: 40px;
+        height: 10px;
+    }
+
+    &__top,
+    &__bottom {
+        transition: .3s;
+        position: absolute;
+        display: block;
+        width: 40px;
+        height: 2px;
+        background: $colorB;
+        transform-origin: 0 50%;
+
+    }
+
+    &__bottom {
+        bottom: 0;
+    }
+
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    background: #FFF;
+    overflow-y: scroll;
+    opacity: 0;
+    transition: .2s;
+    pointer-events: none;
+    z-index: -1;
+
+
+    @include pc{
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    &__work {
+        padding-left: 56px;
+
+        @include pc {
+            padding-left: 13vw;
+        }
+
+    }
+
+    &__wrap {
+        @include pc {
+            overflow: hidden;
+            width: 100%;
+            margin-left: auto;
+        }
+    }
+
+    &__ul {
+        display: block;
+
+        @include pc {
+            display: none;
+        }
+    }
+
+    &__sub {
+        margin-bottom: 40px;
+        font-family: $DMfont;
+        font-weight: bold;
+    }
+
+    &__list {
+        max-width: 463px;
+        width: 87%;
+        margin-bottom: 70px;
+
+        @include pc {
+            width: 100%;
+            margin-bottom: 0;
+        }
+
+        &:last-of-type {
+            margin-bottom: 42px;
+
+            @include pc {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        aspect-ratio: 4 / 3;
+        background: #fff;
+
+        @include pc {
+            aspect-ratio: 1.56 / 2;
+        }
+    }
+
+    &__return {
+        display: block;
+
+        @include pc {
+            display: none;
+        }
+    }
+
+    &__link--02 {
+        &::after {
+            content: '';
+            margin-bottom: 34px;
+            display: block;
+            width: 42px;
+            height: 42px;
+            transform: rotate(180deg);
+            pointer-events: auto;
+            background: url(../images/arrow.svg) center center /contain;
+
+        }
+    }
+
+    .swiper-menu {
+        width: 73vw;
+        display: none;
+
+        @include pc {
+            display: block;
+        }
+
+        &__prev,
+        &__next {
+            display: none;
+
+            @include pc {
+                display: block;
+                width: 80px;
+                height: 80px;
+                transition: .5s;
+            }
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                pointer-events: auto;
+                background: url(../images/arrow.svg) no-repeat center center /contain;
+            }
+        }
+
+        &__prev {
+            top: auto;
+            bottom: 20px;
+            right: 120px;
+            left: auto;
+            transform: rotate(90deg);
+        }
+
+        &__next {
+            top: auto;
+            bottom: 20px;
+            right: 30px;
+            left: auto;
+            transform: rotate(-90deg);
+        }
+    }
+}

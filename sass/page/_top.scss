@@ -1,0 +1,786 @@
+//各ファイルは必ず登録済みの変数を最初に読み込みます
+//as *で読み込みファイル名を省略することができます
+@use "../global" as *;
+
+#top {
+    .mv {
+        position: relative;
+        width: 100vw;
+        background: $colorY;
+
+        &__container {
+            &:nth-of-type(1) {
+                width: 100%;
+                height: 100svh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @include pc {
+                    display: block;
+                }
+            }
+
+            &:nth-of-type(2) {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100svh;
+            }
+        }
+
+        &__svg01 {
+            width: 100%;
+            height: 100%;
+            scale: .8;
+            transform: translate(10%, 12%);
+
+            @include tab {
+                scale: 0.6;
+                transform: translate(35%, 25%);
+            }
+
+            @include pc(1280px) {
+                scale: .475;
+                transform: translate(30.1%, 37.1%);
+            }
+        }
+
+        &__svg02 {
+            width: 100%;
+            height: 100%;
+            scale: .8;
+            transform: translate(10%, 26.5%);
+
+            @include tab {
+                scale: 0.6;
+                transform: translate(35%, 53%);
+
+            }
+
+            @include pc(1280px) {
+                scale: .52;
+                transform: translate(27.5%, 72.2%);
+            }
+        }
+
+        &__rect {
+            height: 100vh;
+            width: 100%;
+            display: none;
+            fill: rgb(241, 236, 232);
+            -webkit-mask: url("#mask__mv");
+            mask: url("#mask__mv");
+        }
+
+        &__video {
+            width: 100%;
+            object-fit: cover;
+            pointer-events: none;
+            scale: 1.5;
+
+            @include tab {
+                height: 100vh;
+                scale: 1;
+            }
+        }
+
+        &__txt {
+            position: absolute;
+            left: 8%;
+            bottom: 26%;
+            z-index: 10;
+            color: $colorMain;
+            font-family: $EBfont;
+            font-size: 17px;
+
+            @include tab {
+                left: 20%;
+                bottom: 23%;
+                font-size: 35px;
+            }
+
+            @include pc(1280px) {
+                left: 14.35%;
+                bottom: 14%;
+                font-size: 40px;
+            }
+        }
+
+        &__left {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+        &__cr {
+            position: absolute;
+            top: 125px;
+            right: 20px;
+            color: #bababa;
+            font-family: $DMfont;
+            font-size: 11px;
+
+            @include tab {
+                top: auto;
+                right: auto;
+                left: -27px;
+                bottom: 46%;
+                font-size: 14.5px;
+                transform: rotate(90deg);
+            }
+        }
+
+        &__leftWrap {
+            position: absolute;
+            left: 20px;
+            bottom: 30px;
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse;
+            gap: 10px;
+
+            @include tab {
+                flex-direction: row;
+                transform: rotate(90deg);
+                left: -30px;
+                bottom: 15%;
+            }
+        }
+
+        &__scroll {
+            width: 40vw;
+            overflow: hidden;
+            font-size: 14.5px;
+            font-family: $DMfont;
+
+
+            @include tab {
+                width: 140px;
+            }
+        }
+
+        &__animate {
+            display: block;
+            width: fit-content;
+            white-space: nowrap;
+            animation: scrollTop 4s linear infinite;
+
+            &::after {
+                content: 'Scroll Down to See More';
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: translateX(110%);
+            }
+
+        }
+
+        &__arrow {
+            width: 12vmin;
+            max-width: 80px;
+            height: 12vmin;
+            max-height: 80px;
+        }
+
+        &__link {
+            &::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: url(../images/arrow.svg) center center /contain;
+                transition: .5s;
+
+                @include tab {
+                    transform: rotate(-90deg);
+                }
+
+            }
+
+            &:hover::before {
+                @include pc {
+                    transform: translateY(10px);
+                }
+
+                @include tab {
+                    transform: rotate(-90deg) translateY(10px);
+                }
+            }
+        }
+    }
+
+    .svg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+    }
+
+    .about {
+        position: relative;
+        width: 86vw;
+        max-width: 680px;
+        margin: 25px auto 267px;
+        z-index: 1;
+
+        @include pc {
+            width: 70%;
+            max-width: 1360px;
+            margin: 0;
+            margin-left: 23.5%;
+        }
+
+        &__scroller {
+            width: 100%;
+            height: 100svh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__ttl {
+            font-size: 13.4vw;
+            color: #f2f2f2;
+            line-height: 1.2;
+            font-family: $EBfont;
+            font-weight: normal;
+            opacity: .8;
+
+            @include pc {
+                font-size: 9.7vw;
+
+            }
+
+            span {
+                display: block;
+            }
+        }
+
+        &__container {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @include tab {
+                padding: 12.5vh 0;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            @include pc(1280px) {
+                padding: 27vh 0;
+
+            }
+        }
+
+        &__circle {
+            position: absolute;
+            top: -32svh;
+            right: 0;
+            margin-left: auto;
+            margin-bottom: 60px;
+            width: 46vw;
+            height: 46vw;
+            max-width: 200px;
+            max-height: 200px;
+            z-index: 1;
+
+            @include tab {
+                position: relative;
+                top: 30px;
+                width: 25vmin;
+                max-width: 250px;
+                height: 25vmin;
+                max-height: 250px;
+                margin: 0;
+            }
+
+            @include pc(1280px) {
+                width: 35vmin;
+                max-width: 300px;
+                height: 35vmin;
+                max-height: 300px;
+            }
+        }
+
+        &__box {
+            @include tab {
+                width: 39.7%;
+            }
+
+            @include pc {
+                width: 57%;
+            }
+        }
+
+        &__btn {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            flex-direction: column;
+            font-size: 21px;
+            font-family: $EBfont;
+            line-height: 1.4;
+            letter-spacing: .1em;
+            gap: 5px;
+
+            @include pc {
+                font-size: 35px;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: #C69676;
+                border-radius: 50%;
+                z-index: -1;
+                transition: .3s;
+            }
+
+            &:hover::before {
+                @include pc {
+                    animation: aboutBtn .5s forwards;
+                }
+            }
+
+            &::after {
+                content: '';
+                width: 5vmin;
+                max-width: 30px;
+                height: 5vmin;
+                max-height: 30px;
+                background: url(../images/arrow-m.svg) center center / contain;
+                margin-top: 15px;
+            }
+        }
+
+        &__txt {
+            font-size: 14px;
+            line-height: 2.2;
+            margin-bottom: 60px;
+
+            @include pc {
+                font-size: 19px;
+                line-height: 2.7;
+            }
+
+            span {
+                display: block;
+            }
+        }
+
+        &__linkTxt {
+            margin-left: auto;
+            width: 57vw;
+            max-width: 280px;
+
+            @include tab {
+                width: 39vw;
+                max-width: 350px;
+
+            }
+
+            @include pc {
+                margin-left: 0;
+                margin-right: auto;
+                width: 18.25vw;
+            }
+        }
+
+        &__link {
+            @include link;
+
+            &:hover::before {
+                @include pc {
+                    animation: linkHover .3s forwards;
+                }
+            }
+        }
+    }
+
+    .work {
+        margin-bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__txt {
+            line-height: 1;
+        }
+
+        &__span-top,
+        &__span-bottom {
+            display: block;
+            font-size: 16vw;
+            font-family: $EBfont;
+            font-weight: normal;
+
+            @include pc {
+                font-size: 13vw;
+            }
+        }
+
+        &__container {
+            position: relative;
+            width: 100%;
+            height: 65svh;
+
+        }
+
+        &__btn {
+            width: 26.75vmin;
+            height: 26.75vmin;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #000;
+<<<<<<< HEAD
+<<<<<<< HEAD
+            background: $colorY;
+=======
+            background: #fff;
+>>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
+=======
+            background: #fff;
+>>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+<<<<<<< HEAD
+<<<<<<< HEAD
+            border: 1px solid #000;
+            transition: .4s;
+
+            &:hover {
+                background: #f4f4f4;
+            }
+=======
+>>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
+=======
+>>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
+
+            @include tab {
+                width: 22vmin;
+                height: 22vmin;
+            }
+
+            @include pc(1500px) {
+                width: 37vmin;
+                height: 37vmin;
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                width: 16px;
+                height: 16px;
+                background: url(../images/arrow-link.svg) center center / contain;
+                position: absolute;
+                bottom: 5px;
+                right: 5px;
+                z-index: 3;
+                transition: .3s;
+
+                @include pc {
+                    width: 22px;
+                    height: 22px;
+                }
+            }
+
+            &:hover {
+                @include pc {
+                    z-index: 1;
+                }
+            }
+
+            &:hover::after {
+                @include pc {
+                    animation: linkHover .3s forwards;
+                }
+            }
+        }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        &__wss {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        &__img-wss,
+        &__img-azito {
+            display: block;
+            width: 100%;
+            pointer-events: none;
+            will-change: transform;
+
+        }
+        &__img {
+            &-wss {
+                aspect-ratio: 2.5 / 1;
+            }
+    
+            &-azito {
+                aspect-ratio: 6 / 1;
+    
+                &:hover {
+                    background: url(images/work-wss_small.jpg) no-repeat top center / cover;
+                }
+            }
+=======
+=======
+>>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
+        
+        &__img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            will-change: transform;
+            border: 1px solid #000;
+<<<<<<< HEAD
+>>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
+=======
+>>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
+        }
+
+        &__bottom {
+            width: 86vw;
+            max-width: 700px;
+            margin: 0 auto;
+
+            @include tab(500px) {
+                padding-top: 8vh;
+            }
+
+        }
+
+        &__bTxt {
+            margin-bottom: 32px;
+            font-size: 14px;
+            line-height: 2;
+
+            @include pc {
+                text-align: center;
+            }
+        }
+
+        &__linkTxt {
+            margin-left: auto;
+            width: 57vw;
+            max-width: 280px;
+
+            @include tab {
+                width: 39vw;
+                max-width: 350px;
+
+            }
+
+            @include pc {
+                margin: 0 auto;
+                width: 18.25vw;
+            }
+        }
+
+        &__link {
+            @include link;
+
+            &:hover::before {
+                @include pc {
+                    animation: linkHover .3s forwards;
+                }
+            }
+        }
+    }
+
+    .contact {
+        &__wrap {
+            position: relative;
+            margin-bottom: 500px;
+            z-index: -1;
+        }
+
+        &__video {
+            width: 100%;
+            height: 100dvh;
+<<<<<<< HEAD
+<<<<<<< HEAD
+            object-fit: cover;
+            pointer-events: none;
+            position: absolute;
+=======
+=======
+>>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
+            background: url(../images/contact_sp.jpg) no-repeat center center / cover;
+>>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
+            z-index: -1;
+
+            @include tab {
+                height: 100vh;
+                scale: 1;
+            }
+        }
+
+        &__bg {
+            position: absolute;
+            width: 100%;
+            height: 100dvh;
+            background: $colorY;
+            transition: .8s;
+        }
+
+        &__ttl {
+            height: 100dvh;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            font-size: 18vw;
+            font-family: $EBfont;
+            font-weight: normal;
+            color: transparent;
+            background: linear-gradient(to right, #9c9c9c 50%, $colorMain 50%);
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            transform: translateX(5%);
+            transition: .4s;
+
+            @include tab {
+                font-size: 11.5vw;
+                transform: translateX(7%);
+            }
+
+        }
+
+        &__span {
+            display: block;
+            line-height: .98;
+        }
+
+        &__container {
+            width: 100%;
+            height: 100svh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__box--01 {
+            padding: 35px 21px;
+            width: 90vw;
+            background: $colorY;
+
+            @include tab {
+                width: 89vw;
+                padding: 45px;
+                max-width: 700px;
+
+            }
+
+            @include pc {
+                padding: 142px 126px;
+                max-width: 1100px;
+            }
+        }
+
+        &__txt {
+            margin-bottom: 35px;
+            font-size: 14px;
+            font-weight: normal;
+            text-align: center;
+            line-height: 2;
+
+            @include tab {
+                font-size: 19px;
+                margin-bottom: 45px;
+            }
+
+            @include pc {
+                margin-bottom: 62px;
+                line-height: 2.5;
+
+            }
+
+        }
+
+        &__linkTxt {
+            margin: 0 auto;
+            width: 57vw;
+            max-width: 280px;
+
+            @include tab {
+                width: 39vw;
+                max-width: 350px;
+            }
+
+            @include pc {
+                width: 18.25vw;
+
+            }
+        }
+
+        &__link {
+            @include link;
+
+            &:hover::before {
+                @include pc {
+                    animation: linkHover .3s forwards;
+                }
+            }
+        }
+
+        &__box--02 {
+            margin: 0 auto;
+            width: 89vw;
+            max-width: 600px;
+            height: 100svh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include pc {
+                max-width: 890px;
+                font-size: 96px;
+            }
+        }
+
+        &__bottom {
+            font-size: 36px;
+            color: #fff;
+            font-family: $EBfont;
+            text-align: center;
+
+            @include tab {
+                font-size: 70px;
+            }
+
+            @include pc {
+                font-size: 96px;
+            }
+        }
+    }
+}

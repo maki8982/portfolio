@@ -1,0 +1,512 @@
+//各ファイルは必ず登録済みの変数を最初に読み込みます
+//as *で読み込みファイル名を省略することができます
+@use "../global" as *;
+
+#interview {
+ 
+    .square {
+        &__ttl {
+            position: relative;
+            &::before {
+                content: '';
+                width: 9px;
+                height: 9px;
+                background: #00CFFF;
+                position: absolute;
+                top: -20px;
+            }
+            &::after {
+                content: '';
+                width: 9px;
+                height: 9px;
+                background: $cBlue;
+                position: absolute;
+                top: -20px;
+                left: 9px;
+            }
+        }
+    }
+    
+
+    .interview {
+        &__pic{
+            width: 100%;
+            height: 500px;
+            margin-bottom: 125px;
+            display: flex;
+            align-items: center;
+            background: url(../images/interview.jpg) top / cover no-repeat; 
+         }
+         &__ttl {
+             padding-left: 153px;
+             font-size: 96px;
+             color: #fff;
+             letter-spacing: .1em;
+             font-family: 'Lato', sans-serif;
+             &::after {
+                 content: '修了生のインタビュー';
+                 margin-top: 12px;
+                 display: block;
+                 font-size: 18px;
+                 font-weight: normal;
+                 letter-spacing: 0;
+                 font-family: $notoSans;
+             }
+         }
+         &__mid { 
+            margin: 0 173px 125px;
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 2.1;
+            text-align: center;
+            span {
+                color: $cBlue;
+            }
+         }
+         &__around {
+            width: 100%;
+            height: 401px;
+            margin-bottom: 200px;
+            background: url(../images/interview2.jpg) top / cover no-repeat; 
+         }
+
+    }
+
+    .interview1 {
+        margin-left: 374px;
+        margin-bottom: 229px;
+        display: flex;
+        justify-content: space-between;
+        &__ttl {
+            margin-bottom: 85px;
+            font-size: 47px;
+            font-weight: bold;
+            color: $cBlue;
+            letter-spacing: .1em;
+            font-family: 'Lato', sans-serif;
+            &::after {
+                content: 'インタビュー01';
+                margin-top: 8px;
+                display: block;
+                font-size: 16px;
+                font-weight: normal;
+                letter-spacing: 0;
+                font-family: $notoSans;
+            }
+        }
+        &__sub {
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 1.7;
+            color: $cBlue;
+            margin-bottom: 50px;
+        }
+        &__txt {
+            line-height: 2;
+            margin-bottom: 30px;
+        }
+        
+        &__pic {
+            width: 841px;
+            margin-top: 56px;
+        }
+        &__img {
+            width: 100%;
+        }
+        &__box {
+            &--01 {
+                width: 560px;
+            }
+            &--02 {
+                position: relative;
+            }
+        }
+        &__inner {
+            width: 450px;
+            margin-left: -129px;
+            padding: 27px 0 27px 60px;
+            background: $cBlue;
+            position: absolute;
+            line-height: 1.2;
+        }
+        &__job {
+            margin-bottom: 24px;
+            display: block;
+            position: relative;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            &::after {
+                content: '';
+                width: 309px;
+                height: 1px;
+                background: #fff;
+                position: absolute;
+                left: 0;
+                bottom: -4px;
+            }
+        }
+        &__year {
+            display: inline-block;
+            font-size: 16px;
+            color: #fff;
+            margin-right: 30px;
+        }
+        &__name {
+            display: inline-block;
+            font-size: 24px;
+            color: #fff;
+        }
+        
+    }
+    
+    .interview2 {
+        margin-right: 129px;
+        margin-bottom: 219px;
+        padding: 208px 249px 169px 0;
+        background: #F5F5F5;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        &__ttl {
+            margin-bottom: 85px;
+            font-size: 47px;
+            font-weight: bold;
+            color: $cBlue;
+            letter-spacing: .1em;
+            font-family: 'Lato', sans-serif;
+            &::after {
+                content: 'インタビュー02';
+                margin-top: 8px;
+                display: block;
+                font-size: 16px;
+                font-weight: normal;
+                letter-spacing: 0;
+                font-family: $notoSans;
+            }
+        }
+        
+        &__sub {
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 1.7;
+            color: $cBlue;
+            margin-bottom: 50px;
+        }
+        &__txt {
+            line-height: 2;
+            margin-bottom: 30px;
+        }
+        
+        &__pic {
+            width: 841px;
+        }
+        &__img {
+            width: 100%;
+        }
+        &__box {
+            &--01 {
+                width: 560px;
+            }
+            &--02 {
+                position: relative;
+            }
+        }
+        
+        &__inner {
+            width: 450px;
+            margin-left: 443px;
+            padding: 27px 0 27px 60px;
+            background: #fff;
+            position: absolute;
+            bottom: 33px;
+            line-height: 1.2;
+        }
+        &__job {
+            margin-bottom: 24px;
+            display: block;
+            position: relative;
+            font-size: 20px;
+            font-weight: bold;
+            color: $cBlue;
+            &::after {
+                content: '';
+                width: 309px;
+                height: 1px;
+                background: $cBlue;
+                position: absolute;
+                left: 0;
+                bottom: -4px;
+            }
+        }
+        &__year {
+            display: inline-block;
+            font-size: 16px;
+            color: $cBlue;
+            margin-right: 30px;
+        }
+        &__name {
+            display: inline-block;
+            font-size: 24px;
+            color: $cBlue;
+        }       
+    }
+    
+    
+    .interview3 {
+        margin-left: 374px;
+        margin-bottom: 229px;
+        display: flex;
+        justify-content: space-between;
+        &__ttl {
+            margin-bottom: 85px;
+            font-size: 47px;
+            font-weight: bold;
+            color: $cBlue;
+            letter-spacing: .1em;
+            font-family: 'Lato', sans-serif;
+            &::after {
+                content:  'インタビュー03';
+                margin-top: 8px;
+                display: block;
+                font-size: 16px;
+                font-weight: normal;
+                letter-spacing: 0;
+                font-family: $notoSans;
+            }
+        }
+        &__sub {
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 1.7;
+            color: $cBlue;
+            margin-bottom: 50px;
+        }
+        &__txt {
+            line-height: 2;
+            margin-bottom: 30px;
+        }
+
+        &__pic {
+            width: 841px;
+            margin-top: 56px;
+        }
+        &__img {
+            width: 100%;
+        }
+        &__box {
+            &--01 {
+                width: 560px;
+            }
+            &--02 {
+                position: relative;
+            }
+        }
+        &__inner {
+            width: 450px;
+            margin-left: -129px;
+            padding: 27px 0 27px 60px;
+            background: $cBlue;
+            position: absolute;
+            line-height: 1.2;
+        }
+        &__job {
+            margin-bottom: 24px;
+            display: block;
+            position: relative;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            &::after {
+                content: '';
+                width: 309px;
+                height: 1px;
+                background: #fff;
+                position: absolute;
+                left: 0;
+                bottom: -4px;
+            }
+        }
+        &__year {
+            display: inline-block;
+            font-size: 16px;
+            color: #fff;
+            margin-right: 30px;
+        }
+        &__name {
+            display: inline-block;
+            font-size: 24px;
+            color: #fff;
+        }
+
+    }
+
+
+
+
+
+
+    //     &__sub {
+    //         padding-left: 153px;
+    //         font-size: 16px;
+    //         color: #fff;
+    //     }
+    //     &__exp {
+    //         padding: 121px 401px;
+    //         font-size: 30px;
+    //         text-align: center;
+    //         line-height: 64px;
+    //     }
+    // }
+
+    // .exp__span {
+    //     color: $cBlue;
+    // }
+    // .interview1 {
+    //     &__box {
+    //         &__ttl {
+    //             font-size: 47px;
+    //             letter-spacing: 10px;
+    //             color: $cBlue;
+    //         }
+    //         &__sub {
+    //             // width: 408px;
+    //             margin-bottom: 77px;
+    //             font-size: 16px;
+    //             color: $cBlue;
+    //         }
+    //         &__catchcopy {
+    //             font-size: 30px;
+    //             letter-spacing: 5px;
+    //             color: $cBlue; 
+    //         }
+    //         &__txt {
+    //             font-size: 16px;
+    //         }
+    //     }
+    //     &__box2 {
+    //         width: 450px;
+    //         height: 130px;
+    //         background: $cBlue;
+    //         &__job {
+    //         font-size: 20px;
+    //         color: #fff;
+    //         }
+    //         &__year {
+    //             font-size: 16px;
+    //             color: #fff; 
+    //         }
+    //         &__name {
+    //             font-size: 24px;
+    //             color: #fff; 
+    //         }
+    //     }
+    //     &__pic{
+    //         width: 450px;
+    //         height: 130px;
+    //     }
+      
+    // }
+
+    //     .interview2 {
+    //         &__box {
+    //             &__ttl {
+    //                 font-size: 47px;
+    //                 letter-spacing: 10px;
+    //                 color: $cBlue;
+    //             }
+    //             &__sub {
+    //                 margin-bottom: 77px;
+    //                 font-size: 16px;
+    //                 color: $cBlue;
+    //             }
+    //             &__catchcopy {
+    //                 font-size: 30px;
+    //                 letter-spacing: 5px;
+    //                 color: $cBlue; 
+    //             }
+    //             &__txt {
+    //                 font-size: 16px;
+    //             }
+    //         }
+    //         &__box2 {
+    //             width: 450px;
+    //             height: 130px;
+    //             background: $cBlue;
+    //             &__job {
+    //             font-size: 20px;
+    //             color: #fff;
+    //             }
+    //             &__year {
+    //                 font-size: 16px;
+    //                 color: #fff; 
+    //             }
+    //             &__name {
+    //                 font-size: 24px;
+    //                 color: #fff; 
+    //             }
+    //         }
+    //         &__pic{
+    //             width: 450px;
+    //             height: 130px;
+    //         }
+
+    //     }
+             
+    //           .interview3 {
+    //             &__box {
+    //                 &__ttl {
+    //                     font-size: 47px;
+    //                     letter-spacing: 10px;
+    //                     color: $cBlue;
+    //                 }
+    //                 &__sub {
+    //                     // width: 408px;
+    //                     margin-bottom: 77px;
+    //                     font-size: 16px;
+    //                     color: $cBlue;
+    //                 }
+    //                 &__catchcopy {
+    //                     font-size: 30px;
+    //                     letter-spacing: 5px;
+    //                     color: $cBlue; 
+    //                 }
+    //                 &__txt {
+    //                     font-size: 16px;
+    //                 }
+    //             }
+    //             &__box2 {
+    //                 width: 450px;
+    //                 height: 130px;
+    //                 background: $cBlue;
+    //                 &__job {
+    //                 font-size: 20px;
+    //                 color: #fff;
+    //                 }
+    //                 &__year {
+    //                     font-size: 16px;
+    //                     color: #fff; 
+    //                 }
+    //                 &__name {
+    //                     font-size: 24px;
+    //                     color: #fff; 
+    //                 }
+    //             }
+    //             &__pic{
+    //                 width: 450px;
+    //                 height: 130px;
+    //             }
+              
+    //         }
+
+             
+    }
+   
+
+             
+
+
+
+
+
+

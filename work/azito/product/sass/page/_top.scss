@@ -1,0 +1,479 @@
+//各ファイルは必ず登録済みの変数を最初に読み込みます
+//as *で読み込みファイル名を省略することができます
+@use "../global" as *;
+
+#top {
+    .mv {
+        height: 100vh;
+        padding-top: 135px;
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            background: #F3F6FA;
+            width: 100%;
+            height: 570px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        &__wrap {
+            width: 72vw;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        &__bg {
+            width: 100%;
+            height: 100%;
+            background: url(../images/mv.jpg) no-repeat left bottom / contain;
+            // animation: mvScale 2s infinite;
+
+        }
+
+        &__scroll {
+            position: absolute;
+            bottom: 0px;
+            right: 6%;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            transform: rotate(90deg);
+            transform-origin: 100% 100%;
+            font-size: 20px;
+            font-family: $robofont;
+        }
+
+        &__bar {
+            width: 180px;
+            overflow: hidden;
+            position: relative; 
+
+            &::before {
+                content: '';
+                display: block;
+                position: relative;
+                right: 0;
+                top: 0;
+                width: 100%;
+                height: 1px;
+                background: #000;
+                animation: scroll 2.5s infinite ease-in-out;
+                z-index: 1;
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 100%;
+                height: 1px;
+                background: #999;
+            }
+        }
+    }
+
+    .about {
+        padding-top: 220px;
+        padding-bottom: 256px;
+        background: #F3F6FA;
+
+        &__wrap {
+            padding-left: 301.5px;
+        }
+
+        &__ttl {
+            margin-bottom: 90px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 30px;
+            font-family: $volfont;
+            font-weight: bold;
+
+            &::after {
+                content: '私たちのこと';
+                font-size: 13px;
+                letter-spacing: 0.1em;
+            }
+        }
+
+        &__container--01 {
+            margin-bottom: 220px;
+            display: flex;
+            align-items: center;
+            gap: 110px;
+            position: relative;
+
+        }
+
+        &__sub {
+            font-size: 30px;
+            margin-bottom: 22px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            &::after {
+                content: 'Extraordinary and special time';
+                margin-bottom: 50px;
+                font-family: $EBfont;
+                font-size: 22px;
+            }
+        }
+
+        &__txt {
+            line-height: 2;
+            letter-spacing: 0.1em;
+            margin-bottom: 50px;
+
+            span {
+                display: block;
+                margin-bottom: 25px;
+            }
+        }
+
+        &__link {
+            @include moreBtn;
+        }
+
+        &__pic {
+            position: relative;
+            overflow: hidden;
+        }
+
+        &__img {
+            @include img;
+            position: relative;
+            transition: .8s
+        }
+
+        &__container--02 {
+            margin-bottom: 435px;
+            display: flex;
+            gap: 190px;
+            position: relative;
+
+        }
+    }
+
+    .topRight {
+        position: absolute;
+        right: -12%;
+        bottom: -8%;
+    }
+
+    .middleLeft {
+        margin-top: 10%;
+    }
+
+    .middleRight {
+        position: absolute;
+        bottom: -25%;
+        right: 0;
+    }
+
+    .bottom {
+        width: 994px;
+        margin-left: 265px;
+    }
+
+    .menu {
+        width: 1300px;
+        margin: 137px auto 200px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        &__btn {
+            width: 645px;
+            height: 857px;
+            position: relative;
+
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: rgba(76, 84, 97, 0.5);
+                border-radius: 40px;
+                transition: .3s;
+            }
+
+            &:hover::before {
+                opacity: .5;
+            }
+
+            &:nth-of-type(1) {
+                display: block;
+                background: url(../images/cafemenu.jpg) no-repeat center center / contain;
+            }
+
+            &:nth-of-type(2) {
+                display: block;
+                background: url(../images/relaxation.jpg) no-repeat center center / contain;
+            }
+
+            &:nth-of-type(3) {
+                display: block;
+                background: url(../images/rental.jpg) no-repeat center center / contain;
+            }
+
+            &:nth-of-type(4) {
+                display: block;
+                background: url(../images/access.jpg) no-repeat center center / contain;
+            }
+        }
+
+        &__box {
+            width: 100%;
+            height: 132px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.6);
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            z-index: 1;
+            color: #000;
+            letter-spacing: 0.15em;
+        }
+
+        &__sub {
+            margin-bottom: 22px;
+            font-size: 28px;
+            font-family: $EBfont;
+            font-weight: bold;
+        }
+
+        &__txt {
+            font-family: $robofont;
+        }
+
+        &__more {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: $robofont;
+            color: #fff;
+            letter-spacing: 0.1em;
+        }
+    }
+
+    .news {
+        width: 1300px;
+        margin: 137px auto 200px;
+        display: flex;
+        align-items: center;
+
+        &__ttl {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 30px;
+            font-family: $volfont;
+            font-weight: bold;
+
+            &::after {
+                content: '新着情報';
+                margin-bottom: 150px;
+                font-size: 13px;
+                letter-spacing: 0.1em;
+            }
+        }
+
+        &__link--01 {
+            @include moreBtn;
+        }
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+            width: 28%;
+        }
+
+        &__ul {
+            width: 72%;
+            border-top: 1px solid #000;
+        }
+
+        &__list {
+            border-bottom: 1px solid #000;
+        }
+
+        &__link--02 {
+            display: block;
+            padding: 35px 0;
+            color: #000;
+            text-decoration: none;
+            display: flex;
+            position: relative;
+
+            &::after {
+                content: url(../images/arrow.png);
+                position: absolute;
+                right: 3%;
+            }
+
+        }
+
+        &__date {
+            width: 60px;
+            margin-right: 25px;
+        }
+
+        &__category {
+            margin-right: 122px;
+        }
+    }
+
+    .insta {
+        padding: 150px 0 150px 301.5px;
+        margin-bottom: 30px;
+        background: #F0F0F0;
+        display: flex;
+        align-items: center;
+        gap: 97px;
+
+        &__container {
+            position: relative;
+        }
+
+        &__ttl {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 30px;
+            font-family: $volfont;
+            font-weight: bold;
+
+            &::after {
+                content: 'インスタグラム';
+                margin-bottom: 250px;
+                font-size: 13px;
+                letter-spacing: 0.1em;
+            }
+        }
+
+        &__link--01 {
+            @include moreBtn;
+        }
+
+        &__img {
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        &__link--02 {
+            color: #000;
+            text-decoration: none;
+        }
+
+        &__txt {
+            font-size: 13px;
+        }
+    }
+
+    .swiper-insta {
+        width: 70vw;
+        height: 387px;
+
+        &__slide01,
+        &__slide02,
+        &__slide03,
+        &__slide04 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+        }
+
+        &__prev,
+        &__next {
+            &::after {
+                content: '';
+                display: block;
+                width: 18px;
+                height: 17px;
+                pointer-events: auto;
+                border-top: 1px solid #000;
+                border-right: 1px solid #000;
+
+            }
+        }
+
+        &__prev {
+            transform: rotate(-135deg);
+        }
+
+        &__next {
+            transform: rotate(45deg);
+        }
+    }
+
+    .reserve {
+        padding: 83px 160px;
+        background: #F5F5EF;
+
+        &__container {
+            padding: 60px 150px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #fff;
+
+            &::after {
+                content: '';
+                display: block;
+                width: 715px;
+                height: 405px;
+                background: url(../images/reserve.jpg) no-repeat center center / contain;
+            }
+        }
+
+        &__ttl {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 30px;
+            font-family: $volfont;
+            font-weight: bold;
+
+            &::after {
+                content: 'ご予約について';
+                margin-bottom: 60px;
+                font-size: 13px;
+                letter-spacing: 0.1em;
+            }
+        }
+
+        &__txt {
+            line-height: 2;
+            margin-bottom: 52px;
+        }
+
+        &__link {
+            @include moreBtn;
+        }
+
+
+    }
+
+}

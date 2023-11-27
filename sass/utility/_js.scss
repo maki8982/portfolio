@@ -1,0 +1,62 @@
+//各ファイルは必ず登録済みの変数を最初に読み込みます
+//as *で読み込みファイル名を省略することができます
+@use "../global" as *;
+
+.btnTxt-active {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.btnTxt-hidden {
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.top-js {
+    transform: rotate(12deg);
+}
+
+.bottom-js {
+    transform: rotate(-12deg);
+}
+
+.menu-active {
+    opacity: 1;
+    pointer-events: all;
+    z-index: 2;
+}
+
+.over-h {
+    overflow: hidden;
+}
+
+.passive {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#top {
+    .bg-js {
+        background: $colorB;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    .border-js {
+        border-bottom: 1px #d8d8d8 solid;
+    }
+
+    .op-js {
+        animation: op 3s ease-in-out forwards;
+    }
+
+    .opacity-js {
+        opacity: 0;
+    }
+
+}

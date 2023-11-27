@@ -1,0 +1,107 @@
+//各ファイルは必ず登録済みの変数を最初に読み込みます
+//as *で読み込みファイル名を省略することができます
+@use "../global" as *;
+
+.gnav {
+    width: 100%;
+    &__nav {
+        padding-top: 15dvh;
+        padding-left: 45px;
+        margin-bottom: 10%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        font-family: $EBfont;
+
+        @include pc {
+            padding-top: 0;
+            padding-left: 6.3vw;
+            margin-bottom: 0;
+            gap: 47px;
+        }
+
+    }
+
+    &__link {
+        display: block;
+        padding: 10px;
+        font-size: 36px;
+        text-decoration: none;
+        display: flex;
+
+        @include linkBg;
+
+        &::after {
+            content: url(../images/arrow-linkhover.svg);
+            display: block;
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: .3s;
+        }
+
+        &:hover {
+            @include pc {
+                transform: translateX(10px);
+            }
+        }
+        &:hover::after {
+            @include pc {
+                opacity: 1;
+                transform: translateX(10px);
+            }
+        }
+    }
+}
+
+.fnav {
+    margin-bottom: 50px;
+    width: 100px;
+
+    @include pc {
+        margin-bottom: 0;
+        width: 160px;
+    }
+
+    &__list {
+        margin-bottom: 22px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &__link {
+        padding: 10px;
+        font-size: 22px;
+        font-family: $EBfont;
+        text-decoration: none;
+        display: flex;
+        align-items: flex-end;
+        @include linkBg;
+
+        @include pc {
+            font-size: 36px;
+        }
+
+        &::after {
+            content: url(../images/arrow-linkhover.svg);
+            display: block;
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: .3s;
+        }
+
+        &:hover {
+            @include pc {
+                transform: translateX(10px);
+            }
+        }
+        &:hover::after {
+            @include pc {
+                opacity: 1;
+                transform: translateX(10px);
+            }
+        }
+    
+    }
+}

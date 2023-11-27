@@ -1,0 +1,543 @@
+//各ファイルは必ず登録済みの変数を最初に読み込みます
+//as *で読み込みファイル名を省略することができます
+@use "../global" as *;
+
+#top {
+    
+    .mv {
+        height: 100vh;
+        background: url(../images/mv.jpg) fixed top / cover no-repeat;
+        &__copy {
+            padding-top: 484px;
+            padding-left: 155px;
+            color: #000;
+            font-size: 170px;
+            font-family: 'Lato', sans-serif;
+            font-weight: bold;
+            span {
+                margin-bottom: 12px;
+                display: block;
+                font-size: 48px;
+                color: $cBlue;
+                font-family: $notoSans;
+            }
+        }
+    }
+
+
+    .about {
+            padding: 200px 0 282px 400px;
+            background: $cWhite;
+            position: relative;
+            &::after {
+                content: 'What’s WSS?';
+                position: absolute;
+                right: 0;
+                bottom: 245px;
+                color: #fff;
+                font-size: 220px;
+                font-weight: 800;
+                font-family: 'Lato', sans-serif;
+            }
+            &__ttl {
+                margin-bottom: 72px;
+                font-size: 72px;
+                line-height: 1.7;
+                position: relative;         
+                span {
+                    color: $cBlue;
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 28px;
+                    left: -66px;
+                    width: 1px;
+                    height: 150px;
+                    background-color: #436CD0;
+                }
+                &::after {
+                    content: 'ABOUT';
+                    position: absolute;
+                    top: 200px;
+                    left: -80px;
+                    writing-mode: vertical-rl;
+                    color: #436CD0;
+                    font-size: 18px;
+                    font-weight: normal;
+                    font-family: 'Lato', sans-serif;
+                }
+            }
+            &__txt {
+                font-size: 20px;
+                line-height: 2.5;
+                &:nth-of-type(1) {
+                    margin-bottom: 50px;
+                }
+                &:nth-of-type(2) {
+                    margin-bottom: 171px;
+                }
+ 
+            }
+            &__bg {
+                margin-bottom: 200px;
+                width: 100%;
+                height: 894px;
+                background: url(../images/TOP_about.jpg) top / contain no-repeat;
+            }
+    }
+
+
+    .study {
+        margin-bottom: 200px;
+        &__wrap {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__pic {
+            width: 1089px;
+        }
+        &__img {
+            width: 100%;
+        }
+        &__ttl {
+            color: $cBlue;
+            margin-bottom: 68px;
+            font-size: 47px;
+            letter-spacing: .2em;
+            font-family: 'Lato', sans-serif;
+            &::after {
+                content: 'WSSで学べること';
+                margin-top: 8px;
+                display: block;
+                font-size: 16px;
+                font-weight: normal;
+                letter-spacing: 0;
+                font-family: $notoSans;
+            }
+        }
+        &__box {
+            width: 528px;
+            margin: 72px auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &__sub {
+            margin-bottom: 50px;
+            color: $cBlue;
+            font-size: 30px;
+            font-weight: 800;
+            line-height: 1.5;
+        }
+        &__txt {
+             line-height: 2;
+        }
+        .more__btn {
+            align-self: flex-end;
+        }
+    }
+
+    .job {
+        margin-bottom: 350px;
+        position: relative;
+        &__pic {
+            width: 100%;
+            height: 779px;
+            background: url(../images/TOP_job.jpg);
+            &::after {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 239px;
+                bottom: -57px;
+                position: absolute;
+                background: #effafe;
+                z-index: -1;
+            }
+        }
+        &__wrap {
+            margin-top: -240px;
+            margin-left: 400px;
+            padding: 91px 0 91px 283px;
+            background: #fff;
+            display: flex;
+            justify-content: space-between;
+        }
+        &__inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            &:nth-of-type(2) {
+                width: 70%;
+            }
+        }
+        &__ttl {
+            margin-top: 25px;
+            color: $cBlue;
+            font-size: 47px;
+            letter-spacing: .2em;
+            font-family: 'Lato', sans-serif;
+            &::after {
+                content: '就職実績';
+                margin-top: 8px;
+                display: block;
+                font-size: 16px;
+                font-weight: normal;
+                letter-spacing: 0;
+                font-family: $notoSans;
+            }
+        }
+        &__sub {
+            margin-bottom: 26px;
+            color: $cBlue;
+            font-size: 30px;
+            line-height: 1.6;
+            font-weight: bold;
+        }
+        &__txt {
+            line-height: 2;
+        }
+    }
+    
+    .infosession {
+        margin-bottom: 200px;
+        position: relative;
+        &__pic {
+            width: 100%;
+            height: 471px;
+            background: url(../images/TOP_infosession.jpg);
+        }
+        &__wrap {
+            width: 1120px;
+            padding: 88px 0 87px;
+            background: #FAFAFA;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            top: -72px;
+            left: 50%;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+        }
+        &__ttl {
+            margin-bottom: 70px;
+            color: $cBlue;
+            font-size: 47px;
+            letter-spacing: .2em;
+            font-family: 'Lato', sans-serif;
+            &::after {
+                content: '説明会';
+                margin-top: 8px;
+                display: flex;
+                justify-content: center;
+                font-size: 16px;
+                font-weight: normal;
+                letter-spacing: 0;
+                font-family: $notoSans;
+            }
+        }
+        .square {
+            &__ttl {
+                left: 47%;
+                transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+            }
+        }
+        &__txt {
+            margin-bottom: 44px;
+            line-height: 2;
+        }
+    }
+
+    .interview {
+        margin-bottom: 200px;
+        padding: 100px 108px 90px;
+        background: #F5F5F5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__ttl {
+            margin-bottom: 56px;
+            color: $cBlue;
+            font-size: 47px;
+            letter-spacing: .2em;
+            font-family: 'Lato', sans-serif;
+            &::after {
+                content: '修了生のインタビュー';
+                margin-top: 8px;
+                display: flex;
+                justify-content: center;
+                font-size: 16px;
+                font-weight: normal;
+                letter-spacing: 0;
+                font-family: $notoSans;
+            }
+        }
+        .square {
+            &__ttl {
+                left: 47%;
+                transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+            }
+        }
+        &__txt {
+            margin-bottom: 90px;
+        }
+        &__wrap {
+            width: 1641px;
+            margin: 0 auto 90px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        &__sub {
+            width: 420px;
+            padding: 30px 55px;
+            background: #fff;
+            line-height: 1.2;
+            position: relative;
+            margin-top: -63px;
+            margin-left: 82px;
+        }
+        &__job {
+            margin-bottom: 30px;
+            display: block;
+            position: relative;
+            font-size: 20px;
+            font-weight: bold;
+            color: #436CD0;
+            &::after {
+                content: '';
+                width: 309px;
+                height: 1px;
+                background: #60C3DC;
+                position: absolute;
+                left: 0;
+                bottom: -11px;
+            }
+        }
+        &__name {
+            display: block;
+            margin-top: 5px;
+            font-size: 20px;
+        }
+    }
+
+    .faq {
+        width: 100%;
+        margin-bottom: 200px;
+        padding: 70px 0;
+        background: url(../images/TOP_faq.jpg);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__ttl {
+            margin-bottom: 61px;
+            font-size: 47px;
+            color: #fff;
+            letter-spacing: .2em;
+            font-family: 'Lato', sans-serif;
+            &::after {
+                content: 'よくある質問';
+                margin-top: 8px;
+                display: flex;
+                justify-content: center;
+                font-size: 16px;
+                font-weight: normal;
+                letter-spacing: 0;
+                font-family: $notoSans;
+            }
+        }
+        &__txt {
+            margin-bottom: 36px;
+            text-align: center;
+            line-height: 2;
+            color: #fff;
+        }
+    }
+    .access {
+        margin-bottom: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__ttl {
+            margin-bottom: 56px;
+            color: $cBlue;
+            font-size: 47px;
+            letter-spacing: .2em;
+            font-family: 'Lato', sans-serif;
+            &::after {
+                content: '学校案内';
+                margin-top: 8px;
+                display: flex;
+                justify-content: center;
+                font-size: 16px;
+                font-weight: normal;
+                letter-spacing: 0;
+                font-family: $notoSans;
+            }
+        }
+        .square {
+            &__ttl {
+                left: 47%;
+                transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+            }
+        }
+        &__wrap {
+            display: flex; 
+            justify-content: space-between;
+            align-items: center;
+            gap: 103px;
+        }
+        &__box {
+            width: 705px;
+            display: flex;  
+            padding: 25px 0;
+            position: relative;
+            &::before {
+                content: '';
+                width: 22%;
+                height: 2px;
+                background: $cBlue;
+                position: absolute;
+                bottom: 0;
+            }
+            &::after {
+                content: '';
+                width: calc(100% - 22%);
+                height: 2px;
+                background: #CFD5D8;
+                position: absolute;
+                left: 22%;
+                bottom: 0;
+            }
+        }
+        &__dt {
+            width: 22%;
+            font-weight: bold;
+            line-height: 2; 
+        }
+        &__dd {
+            width: calc(100% - 22%);
+            padding-left: 25px;
+            line-height: 2;
+        }
+
+    }
+
+    
+    .square {
+        &__ttl {
+            position: relative;
+            &::before {
+                content: '';
+                width: 9px;
+                height: 9px;
+                background: #00CFFF;
+                position: absolute;
+                top: -12px;
+            }
+            &::after {
+                content: '';
+                width: 9px;
+                height: 9px;
+                background: $cBlue;
+                position: absolute;
+                top: -12px;
+                left: 9px;
+            }
+        }
+    }
+    
+    
+    
+    .view__btn {
+        width: 400px;
+        text-align: center;
+    }
+    .view__link {
+        display: block;
+        width: 100%;
+        padding: 37px 0;
+        background: #fff;
+        color: #000;
+        text-decoration: none;
+        position: relative;
+        transition: .3s;
+        &::after {
+            content: '';
+            width: 40px;
+            height: 1px;
+            background: #000;
+            position: absolute;
+            top: 50%;
+            right: 0;
+        }
+        &:hover {
+            background: #000;
+            color: #fff;
+        }
+    }
+    
+    
+    
+    .more {
+        &__btn {
+            width: 140px;
+            height: 45px;
+        }
+        &__arrow {
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            background: #00CFFF;
+            position: relative;
+            &::before {
+                content: '';
+                width: 10px;
+                height: 10px;
+                border-top: 2px solid #fff;
+                border-right: 2px solid #fff;
+                position: absolute;
+                top: 17px;
+                left: 18px;
+                transform: rotate(45deg);
+            }
+            &::after {
+                content: '';
+                width: 18px;
+                height: 2px;
+                background: #fff;
+                position: absolute;
+                top: 50%;
+                left: 12px;
+                
+            }       
+        }
+        &__link {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: none;
+            color: #000;
+            &:hover {
+                opacity: .5;
+            }
+        }
+    }    
+}
+
+
+
+
+

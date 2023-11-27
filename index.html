@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>maki.homma portfolio site</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=EB+Garamond&family=Noto+Sans+JP:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link href="css/style.css?20231117" rel="stylesheet" media="all">
+</head>
+
+<body id="top">
+  <div id="wrapper" class="wrapper">
+    <header id="header" class="header border-js opacity-js">
+      <h1 class="header__ttl"><a href="index.html" class="header__link--01"><img src="images/logo.svg"
+            alt="maki.homma portfolio site" class="header__logo"></a></h1>
+      <ul id="header__ul" class="header__ul">
+        <li class="header__list"><a href="index.html" class="header__link--02">Home</a></li>
+        <li class="header__list"><a href="about/index.html" class="header__link--02">About</a></li>
+        <li class="header__list"><a href="work/index.html" class="header__link--02">Work</a></li>
+        <li class="header__list"><a href="contact/index.html" class="header__link--02">Contact</a></li>
+      </ul>
+      <div id="btn" class="btn">
+        <p id="close-js" class="btn__close">Close</p>
+        <p id="menu-js" class="btn__txt">Menu</p>
+        <div class="btn__border">
+          <span id="btn__top" class="btn__top"></span>
+          <span id="btn__bottom" class="btn__bottom"></span>
+        </div>
+      </div>
+      <div id="menu" class="menu">
+        <nav id="gnav" class="gnav">
+          <ul class="gnav__nav">
+            <li class="gnav__list"><a href="index.html" class="gnav__link">Home</a></li>
+            <li class="gnav__list"><a href="about/index.html" class="gnav__link">About</a></li>
+            <li class="gnav__list"><a href="work/index.html" class="gnav__link">Work</a></li>
+            <li class="gnav__list"><a href="contact/index.html" class="gnav__link">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="menu__work">
+          <p class="menu__sub">Work</p>
+          <div class="menu__wrap">
+            <div class="swiper swiper-menu">
+              <div class="swiper-wrapper swiper-menu__wrapper">
+                <div class="swiper-slide menu__list"><a href="work/wss/index.html" class="menu__link--1"><img
+                      src="images/work-wss_small.jpg" alt="" class="menu__img"></a></div>
+                <div class="swiper-slide menu__list"><a href="work/azito/index.html" class="menu__link--1"><img
+                      src="images/work-azito_small.jpg" alt="" class="menu__img"></a></div>
+                <div class="swiper-slide menu__list"><a href="#" class="menu__link--1"><img
+                      src="images/work-wss_small.jpg" alt="" class="menu__img"></a></div>
+                <div class="swiper-slide menu__list"><a href="#" class="menu__link--1"><img
+                      src="images/work-wss_small.jpg" alt="" class="menu__img"></a></div>
+                <div class="swiper-slide menu__list"><a href="#" class="menu__link--1"><img
+                      src="images/work-wss_small.jpg" alt="" class="menu__img"></a></div>
+                <div class="swiper-slide menu__list"><a href="#" class="menu__link--1"><img
+                      src="images/work-wss_small.jpg" alt="" class="menu__img"></a></div>
+                <div class="swiper-slide menu__list"><a href="#" class="menu__link--1"><img
+                      src="images/work-wss_small.jpg" alt="" class="menu__img"></a></div>
+              </div>
+            </div>
+            <div id="swiper-prev" class="swiper-button-prev swiper-menu__prev"></div>
+            <div id="swiper-next" class="swiper-button-next swiper-menu__next"></div>
+            <ul class="menu__ul">
+              <li class="menu__list"><a href="work/wss/index.html" class="menu__link--1"><img
+                    src="images/work-wss_small.jpg" alt="" class="menu__img"></a></li>
+              <li class="menu__list"><a href="work/azito/index.html" class="menu__link--1"><img
+                    src="images/work-azito_small.jpg" alt="" class="menu__img"></a></li>
+              <li class="menu__list"><a href="#" class="menu__link--1"><img src="images/work-wss_small.jpg" alt=""
+                    class="menu__img"></a></li>
+            </ul>
+            <p class="menu__return"><a href="#gnav" id="menu__link--02" class="menu__link--02"></a></p>
+          </div>
+        </div>
+      </div>
+      <div id="header__right" class="header__right">
+        <p class="header__contact">
+          <a href="contact/index.html" class="header__btn"></a>
+        </p>
+      </div>
+    </header>
+
+    <main class="main">
+      <div id="mv" class="mv">
+        <div class="mv__container">
+            <video id="mv__video" class="mv__video" playsinline autoplay muted loop>
+              <source src="images/mv.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div id="mv__container" class="mv__container bg-js">
+          <svg id="svg" class="svg opacity-js">
+            <defs>
+              <mask id="mask__mv" x="0" y="0" width="100%" height="100%">
+                <rect x="0" y="0" width="100%" height="100%" fill="#ffffff" />
+                <svg fill="#2D2F31" xmlns="http://www.w3.org/2000/svg">
+                  <image width="100%" height="100%" id="mv__svg01" class="mv__svg01"
+                    xlink:href="images/neverstop.svg" />
+                  <image width="100%" height="100%" id="mv__svg02" class="mv__svg02"
+                    xlink:href="images/progressing.svg" />
+                </svg>
+              </mask>
+            </defs>
+            <rect class="mv__rect" x="0" y="0" width="100%" height="100%" style="display: block;" />
+          </svg>
+          <p id="mv__txt" class="mv__txt color-js">Welcome to maki honma portfolio.</p>
+        </div>
+        <div class="mv__left">
+          <p id="mv__cr" class="mv__cr opacity-js">All Rights Reserved © honma maki</p>
+          <div id="mv__leftWrap" class="mv__leftWrap opacity-js">
+            <p class="mv__scroll">
+              <span class="mv__animate">Scroll Down to See More</span>
+            </p>
+            <p class="mv__arrow"><a href="#about__scroller" id="mv__link" class="mv__link"></a></p>
+          </div>
+        </div>
+      </div>
+
+      <div id="about__scroller" class="about__scroller">
+        <h2 id="about__ttl" class="about__ttl">
+          <span>Keep up</span>
+          <span>with changes</span>
+          <span>and trends</span>
+        </h2>
+      </div>
+      <div id="about-sec" class="about">
+        <div class="about__container">
+          <p class="about__circle">
+            <a href="work/index.html" class="about__btn">My<br>Works</a>
+          </p>
+          <div class="about__box">
+            <p class="about__txt">
+              <span>変化が激しく、短期間でトレンドが移り変わる業界で、時代の流れに取り残されない、
+                常に向上心を持って前に進んでいけるような人材でありたい。<br>
+                まだまだ未熟者ではありますが、そんな思いで勉強・作品制作をしています。</span>
+              どんなデザインも再現できるような技術を身に着けるために、これからも日々精進して参ります。
+            </p>
+            <p class="about__linkTxt">
+              <a href="about/index.html" class="about__link">About</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <section id="work-sec" class="work">
+        <h2 id="work__txt" class="work__txt">
+          <span id="wark__top" class="work__span-top">Introducing<br>
+            my
+          </span>
+          <span id="work__bottom" class="work__span-bottom">works.</span>
+        </h2>
+        <div id="work__container" class="work__container">
+          <ass= class="work__box">
+            <a id="work__box01" href="#" class="work__btn">Comming soon.</a>
+            <a id="work__box02" href="#" class="work__btn">Comming soon.</a>
+            <a id="work__box03" href="#" class="work__btn">Comming soon.</a>
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <a id="work__box04" href="work/azito/index.html" class="work__btn"><img src="work/azito/product/images/logo.svg"
+                alt="cafe azito" class="work__img-azito"></a>
+            <a id="work__box05" href="work/wss/index.html" class="work__btn">
+              <span class="work__wss"></span><img src="work/wss/product/images/wss_logo.svg"
+                alt="WSS（ウェブスタディサッポロ）" class="work__img-wss"></a>
+=======
+=======
+>>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
+            <a id="work__box04" href="work/azito/index.html" class="work__btn"><img src="images/work-azito_small.jpg"
+                alt="cafe azito" class="work__img"></a>
+            <a id="work__box05" href="work/wss/index.html" class="work__btn"><img src="images/work-wss_small.jpg"
+                alt="WSS（ウェブスタディサッポロ）" class="work__img"></a>
+<<<<<<< HEAD
+>>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
+=======
+>>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
+        </div>
+        <div class="work__bottom">
+          <p class="work__bTxt">職業訓練校の授業で制作した作品や、学んだことを生かして制作した作品です。</p>
+          <p class="work__linkTxt"><a href="work/index.html" class="work__link">See All Works </a></p>
+        </div>
+      </section>
+
+      <section id="contact-sec" class="contact">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <div class="contact__wrap">
+          <div id="contact__bg" class="contact__bg"></div>
+          <video class="contact__video" playsinline autoplay muted loop>
+            <source src="images/mv.mp4" type="video/mp4">
+          </video>
+          <h2 id="contact__ttl" class="contact__ttl">
+=======
+=======
+>>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
+        <div id="contact__view" class="contact__view">
+          <div class="contact__bg"></div>
+          <h2 class="contact__ttl">
+>>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
+            <span class="contact__span">Please,</span>
+            <span class="contact__span">get in touch.</span>
+          </h2>
+        </div>
+        <div class="contact__container">
+          <div id="contact__box--01" class="contact__box--01">
+            <p class="contact__txt">ここまでご覧下さりありがとうございます。<br>
+              何かありましたら以下の「Contact」のメールフォームよりご連絡いただけますと幸いです。
+            </p>
+            <p class="contact__linkTxt"><a href="contact/index.html" class="contact__link">Contact</a></p>
+          </div>
+        </div>
+        <div class="contact__box--02">
+          <p class="contact__bottom">Thank you for watching till the end!</p>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer" class="footer">
+      <nav class="fnav">
+        <ul class="fnav__nav">
+          <li class="fnav__list"><a href="index.html" class="fnav__link">Home</a></li>
+          <li class="fnav__list"><a href="about/index.html" class="fnav__link">About</a></li>
+          <li class="fnav__list"><a href="work/index.html" class="fnav__link">Work</a></li>
+          <li class="fnav__list"><a href="contact/index.html" class="fnav__link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer__wrap">
+        <p class="footer__txt"><small class="footer__small">All Rights Reserved ©h.maki</small></p>
+        <div class="footer__box">
+          <p class="footer__scroll">
+            <span class="footer__animate">Page Top</span>
+          </p>
+          <p class="footer__arrow"><a href="#top" id="footer__link" class="footer__link"></a></p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/common.js?20231126"></script>
+  <script src="js/function.js?20231126"></script>
+</body>
+
+</html>

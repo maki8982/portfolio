@@ -1,0 +1,23 @@
+// settingフォルダの変数を読み込みます
+
+@use "../setting" as *;
+
+@keyframes mvScale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+  
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+
+  }
+}

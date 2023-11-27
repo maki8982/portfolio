@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width">
+  <title>maki.homma portfolio site - Contact</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=EB+Garamond&family=Noto+Sans+JP&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link href="../css/style.css?20231117" rel="stylesheet" media="all">
+</head>
+
+<body id="contact">
+  <div id="wrapper" class="wrapper">
+    <header id="header" class="header border-js">
+      <h1 class="header__ttl"><a href="../index.html" class="header__link--01"><img src="../images/logo.svg"
+            alt="maki.homma portfolio site" class="header__logo"></a></h1>
+      <ul id="header__ul" class="header__ul">
+        <li class="header__list"><a href="../index.html" class="header__link--02">Home</a></li>
+        <li class="header__list"><a href="../about/index.html" class="header__link--02">About</a></li>
+        <li class="header__list"><a href="../work/index.html" class="header__link--02">Work</a></li>
+        <li class="header__list"><a href="index.html" class="header__link--02">Contact</a></li>
+      </ul>
+      <div id="btn" class="btn">
+        <p id="close-js" class="btn__close">Close</p>
+        <p id="menu-js" class="btn__txt">Menu</p>
+        <div class="btn__border">
+          <span id="btn__top" class="btn__top"></span>
+          <span id="btn__bottom" class="btn__bottom"></span>
+        </div>
+      </div>
+      <div id="menu" class="menu">
+        <nav id="gnav" class="gnav">
+          <ul class="gnav__nav">
+            <li class="gnav__list"><a href="../index.html" class="gnav__link">Home</a></li>
+            <li class="gnav__list"><a href="../about/index.html" class="gnav__link">About</a></li>
+            <li class="gnav__list"><a href="../work/index.html" class="gnav__link">Work</a></li>
+            <li class="gnav__list"><a href="index.html" class="gnav__link">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="menu__work">
+          <p class="menu__sub">Work</p>
+          <div class="menu__wrap">
+            <div class="swiper swiper-menu">
+              <div class="swiper-wrapper swiper-menu__wrapper">
+                <div class="swiper-slide menu__list"><a href="../work/wss/index.html" class="menu__link--01"><img
+                      src="../images/work-wss_small.jpg" alt="" class="menu__img"></a></div>
+                <div class="swiper-slide menu__list"><a href="../work/azito/index.html" class="menu__link--01"><img
+                      src="../images/work-azito_small.jpg" alt="" class="menu__img"></a></div>
+                <div class="swiper-slide menu__list"><a href="#" class="menu__link--01"><img
+                      src="../images/work-wss_small.jpg" alt="" class="menu__img"></a></div>
+              </div>
+            </div>
+            <div id="swiper-prev" class="swiper-button-prev swiper-menu__prev"></div>
+            <div id="swiper-next" class="swiper-button-next swiper-menu__next"></div>
+            <ul class="menu__ul">
+              <li class="menu__list"><a href="../work/wss/index.html" class="menu__link--01"><img src="../images/work-wss_small.jpg"
+                    alt="" class="menu__img"></a></li>
+              <li class="menu__list"><a href="../work/azito/index.html" class="menu__link--01"><img src="../images/work-azito_small.jpg"
+                    alt="" class="menu__img"></a></li>
+              <li class="menu__list"><a href="#" class="menu__link--01"><img src="../images/work-wss_small.jpg"
+                    alt="" class="menu__img"></a></li>
+            </ul>
+            <p class="menu__return"><a href="#gnav" id="menu__link--02" class="menu__link--02"></a></p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="contact">
+        <h2 class="contact__ttl">Contact</h2>
+        <p class="contact__txt"><span>ご連絡をお待ちしています。</span>
+          何かございましたら下記フォームよりお問い合わせ下さい。
+        </p>
+
+        <div class="contact__wrap">
+          <form id="contactForm" class="form"
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSemwOxa9NlAtVuVIt20nG9XOyv09AfJu9NyxKFA4EK9vukRhw/formResponse"
+            method="post" target="hidden_iframe" onsubmit="submitted=true;">
+            <div class="contact__box">
+              <label class="contact__label" for="company">会社名</label>
+              <input class="contact__input" type="text" id="company" name="entry.1198063353" placeholder="例）〇〇株式会社"
+                required>
+            </div>
+            <div class="contact__box">
+              <label class="contact__label" for="name">お名前</label>
+              <input class="contact__input" type="text" id="name" name="entry.2141377711" placeholder="例）山田 太郎"
+                required>
+            </div>
+            <div class="contact__box">
+              <label class="contact__label" for="phone">電話番号</label>
+              <input class="contact__input" type="phone" id="phone" name="entry.922297104" placeholder="例）090-0000-1111"
+                required>
+            </div>
+            <div class="contact__box">
+              <label class="contact__label" for="email">メールアドレス</label>
+              <input class="contact__input" type="email" id="email" name="entry.1164724980" placeholder="例）xxx@oo.co.jp"
+                required>
+            </div>
+            <div class="contact__box">
+              <label class="contact__label" for="message">お問い合わせ内容</label>
+              <textarea class="contact__textarea" id="message" name="entry.436014517" required></textarea>
+            </div>
+            <div class="contact__box">
+              <span class="contact__btn">
+                <input class="contact__submit" type="submit" value="Submit">
+              </span>
+            </div>
+          </form>
+        </div>
+
+  </div>
+  </section>
+  </main>
+  <footer id="footer" class="footer">
+    <nav class="fnav">
+      <ul class="fnav__nav">
+        <li class="fnav__list"><a href="../index.html" class="fnav__link">Home</a></li>
+        <li class="fnav__list"><a href="../about/index.html" class="fnav__link">About</a></li>
+        <li class="fnav__list"><a href="../work/index.html" class="fnav__link">Work</a></li>
+        <li class="fnav__list"><a href="index.html" class="fnav__link">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="footer__wrap">
+      <p class="footer__txt"><small class="footer__small">All Rights Reserved ©h.maki</small></p>
+      <div class="footer__box">
+        <p class="footer__scroll">
+          <span class="footer__animate">Page Top</span>
+        </p>
+        <p class="footer__arrow"><a href="#contact" id="footer__link" class="footer__link"></a></p>
+      </div>
+    </div>
+  </footer>
+  </div>
+  <script>var submitted = false;</script>
+  <iframe id="hidden_iframe" name="hidden_iframe" style="display:none;"
+    onload="if(submitted)  {window.location='thanks.html';}"></iframe>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="../js/swiper.js"></script>
+  <script src="../js/common.js?20231126"></script>
+</body>
+
+</html>

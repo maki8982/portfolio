@@ -1,0 +1,46 @@
+// settingフォルダの変数を読み込みます
+
+@use "../setting" as *;
+
+@mixin img {
+    display: block;
+    width: 100%;
+}
+
+@mixin moreBtn {
+    width: 145px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    color: #000;
+    text-decoration: none;
+    font-size: 13px;
+    font-family: $robofont;
+
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        background: #4D5562;
+        border-radius: 50%;
+        position: relative;
+    }
+    &::after {
+        content: "";
+        display: inline-block;
+        width: 25px;
+        height: 12px;
+        position: absolute;
+        top: 40%;
+        left: 13%;
+        background: url(../images/link_arrow.png) no-repeat center center/contain;
+        transition: .3s;
+    }
+
+    &:hover::after {
+        transform: translateX(5px);
+    }
+
+}

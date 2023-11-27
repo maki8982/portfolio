@@ -1,0 +1,426 @@
+//各ファイルは必ず登録済みの変数を最初に読み込みます
+//as *で読み込みファイル名を省略することができます
+@use "../global" as *;
+
+
+#job {
+    .mv {
+        height: 501px;
+        background: url(../images/job.jpg) center center / cover no-repeat;
+        display: flex;
+        align-items: center;
+
+        &__copy {
+            padding-left: 153px;
+            color: #fff;
+            font-size: 96px;
+            font-weight: bold;
+            font-family: 'Lato', sans-serif;
+            letter-spacing: .1em;
+            &::after {
+                content: '就職実績';
+                margin-top: 12px;
+                display: block;
+                font-size: 18px;
+                font-weight: normal;
+                letter-spacing: 0;
+                font-family: $notoSans;
+            }
+        }
+
+    }
+    .side {
+        position: fixed;
+        right: 0;
+        top: 340px;
+        z-index: 1;
+        &__ul {
+            display: flex;
+            flex-direction: column;
+        }
+        &__list {
+            width: 50px;
+            height: 160px;
+            font-size: 14px;
+            list-style-type: none;
+            letter-spacing: 0.4em;
+            &:nth-child(1) {
+                background: #60C3DC;
+                &::after {
+                    content: '';
+                }
+            }
+            &:nth-child(2) {
+                background: #436CD0;
+            }
+            
+        }
+        &__link {
+            width: 100%;
+            height: 100%;
+            writing-mode: vertical-rl;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            &:hover {
+                opacity: .5;
+            }
+        }
+
+    }
+
+    .about {
+        width: 1516px;
+        padding: 125px 0;
+        margin: 0 auto;
+        text-align: center;
+        &__txt {
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 2;
+        }
+        &__blue {
+            color: $cBlue;
+        }
+    }
+    .bg {
+        height: 400px;
+        width: 100%;
+        background: url(../images/job2.jpg) center center / cover no-repeat;
+    }
+
+    .aimable {
+        width: 1120px;
+        padding: 164px 0 120px 0;
+        margin: 0 auto;
+        &__ttl {
+            font-size: 47px;
+            font-weight: bold;
+            letter-spacing: 0.15em;
+            color: $cBlue;
+            text-align: center;
+            font-family: 'Lato', sans-serif;
+            position: relative;
+            &::before {
+                content: "";
+                display: block;
+                width: 9px;
+                height: 9px;
+                background: $cAqua;
+                position: absolute;
+                left: 548px;
+                top: -20px;
+                bottom: 0;
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                width: 9px;
+                height: 9px;
+                background: $cBlue;
+                position: absolute;
+                left: 557px;
+                top: -20px;
+                bottom: 0;
+            }
+        }
+        &__small {
+            display: block;
+            margin-bottom: 157px;
+            padding-top: 8px;
+            font-size: 16px;
+            font-weight: normal;
+            letter-spacing: 0.08em;
+            font-family: $notoSans;
+        }
+        &__wrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        &__inner {
+            width: 500px;
+            margin-bottom: 80px;
+            position: relative;
+
+        }
+        &__pic {
+            width: 100%;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        &__img {
+            
+            transition: 0.4s;
+            &:hover {
+                transform: scale(1.05)
+            }
+        }
+        &__sub {
+            font-size: 20px;
+            letter-spacing: 0.1em;
+            position: absolute;
+            top: 285px;
+            left: 10px;
+            z-index: 1;
+            
+        }
+        &__txt {
+            padding: 0 10px;
+            line-height: 2;
+            &::before {
+                content: "";
+                width: 325px;
+                height: 60px;
+                display: block;
+                background: #fff;
+                position: absolute;
+                top: 261px;
+                left: 0;
+
+            }
+        }
+        
+    }
+    .rate {
+        position: relative;
+        &__bg {
+            &::before {
+                content: "";
+                width: 100%;
+                height: 1011px;
+                display: block;
+                background: $cWhite;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                z-index: -1;
+            }  
+        }
+        &__ttl {
+            width: 1120px;
+            height: 120px;
+            margin: 0 auto 120px;
+            background: $cBlue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 48px;
+            font-weight: normal;
+            letter-spacing: .1em;
+        }
+        &__wrap {
+            display: flex;
+            justify-content: center;
+            gap: 88px;
+        }
+        &__inner {
+            width: 696px;
+        }
+        &__sub {
+            width: 300px;
+            margin: 0 auto 60px;
+            padding-bottom: 10px;
+            text-align: center;
+            position: relative;
+            font-size: 24px;
+            border-bottom: 1px solid #000;
+            &::after {
+                content: '';
+                width: 0;
+                height: 0;
+                border-left: 13px solid transparent;
+                border-right: 13px solid transparent;
+                border-top: 15px solid black;
+                display: block;
+                position: absolute;
+                top: 34px;
+                left: 135px;
+            }
+        }
+
+        &__note {
+            margin-top: -160px;
+            margin-right: 20px;
+            margin-bottom: 323px;
+            font-size: 14px;
+            letter-spacing: .05em;
+            text-align: right;
+            line-height: 1.5;
+        }
+    }
+
+    .company {
+        margin-bottom: 110px;
+        &__ttl {
+            margin-bottom: 96px;
+            font-size: 30px;         
+            letter-spacing: 0.1em;  
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+            &::before {
+                content: '';
+                margin-right: 19px;
+                border-top: 1px solid #000;
+                width: 70px; 
+            } 
+            &::after {
+                content: '';
+                margin-left: 18px;
+                border-top: 1px solid #000;
+                width: 70px; 
+            }
+        }
+        &__inner1 {
+            margin-bottom: 87px;
+            padding-left: 319px;
+            display: flex;   
+            align-items: flex-end;
+        }
+        &__logo1 {
+            margin-right: 269.6px;
+        }
+        &__logo2 {
+            margin-right: 255px;
+        }
+        &__inner2 {
+            margin-bottom: 97px;
+            padding-left: 272px;
+            display: flex;   
+            align-items: flex-end;
+        }
+        &__logo4 {
+            margin-right: 73px;
+        }
+        &__logo5 {
+            margin-right: 59px;
+        }
+        &__inner3 {
+            margin-bottom: 75px;
+            padding-left: 313px;
+            display: flex;   
+            align-items: flex-end;
+        }
+        &__logo7 {
+            margin-right: 171px;
+        }
+        &__logo8 {
+            margin-right: 170px;
+        }
+        &__inner4 {
+            margin-bottom: 90px;
+            padding-left: 549px;
+            display: flex;   
+            align-items: flex-end;
+        }
+        &__logo10 {
+            margin-right: 195px;
+        }
+        &__img {
+            transition: 0.4s;
+            &:hover {
+                transform: scale(1.05)
+            }
+        }
+        &__etc {
+            width: 60px;
+            margin: 0 auto;
+            padding-bottom: 5px;
+            text-align: right;
+            font-size: 14px;
+            color: $cBlue;
+            border-bottom: 1px solid $cBlue;
+        }
+    }
+    .support {
+        width: 1618px;
+        margin: 0 auto 200px;
+        padding: 104px 249px 90px 249px;
+        background: $cWhite;
+        &__ttl {
+            font-size: 47px;
+            font-weight: bold;
+            letter-spacing: 0.15em;
+            color: $cBlue;
+            text-align: center;
+            font-family: 'Lato', sans-serif;
+            position: relative;
+            &::before {
+                content: "";
+                display: block;
+                width: 9px;
+                height: 9px;
+                background: $cAqua;
+                position: absolute;
+                left: 548px;
+                top: -20px;
+                bottom: 0;
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                width: 9px;
+                height: 9px;
+                background: $cBlue;
+                position: absolute;
+                left: 557px;
+                top: -20px;
+                bottom: 0;
+            }
+        }
+        &__small {
+            display: block;
+            margin-bottom: 54px;
+            padding-top: 8px;
+            font-size: 16px;
+            font-weight: normal;
+            letter-spacing: 0.08em;
+            font-family: $notoSans;
+         }
+         &__sub {
+            margin-bottom: 80px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1.9;
+            letter-spacing: 0.08em;
+         }
+         &__inner {
+            width: 1120px;
+            height: 210px; 
+            margin-bottom: 72px;
+            background: #fff;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &--ttl {
+                width: 356px;
+                height: 45px;
+                margin-bottom: 33px;
+                font-size: 20px;
+                letter-spacing: 0.05em;
+                background: $cBlue;
+                color: #fff;
+                font-weight: normal;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            &--txt {
+                width: 880px;
+                margin: 0 auto;
+                font-size: 16px;
+                line-height: 1.8;
+            }
+         }
+
+    }
+    
+
+}

@@ -1,0 +1,107 @@
+//各ファイルは必ず登録済みの変数を最初に読み込みます
+//as *で読み込みファイル名を省略することができます
+@use "../global" as *;
+
+.footer {
+    width: 100%;
+    background: $colorYB;
+    padding: 100px 15px 24px;
+
+    @include tab {
+        padding: 100px 50px 24px;
+    }
+
+    @include pc {
+        display: block;
+        padding: 30.5vh 0 80px 11.5vw;
+        position: relative;
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 20px;
+
+        @include pc {
+            justify-content: flex-start;
+            flex-direction: row;
+            gap: 30px;
+            position: absolute;
+            bottom: 30%;
+            left: -120px;
+            transform: rotate(90deg);
+        }
+    }
+
+    &__txt {
+        display: block;
+        font-family: $DMfont;
+
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__scroll {
+        display: none;
+        font-family: $DMfont;
+
+        @include pc {
+            width: 4.5vw;
+            display: block;
+            overflow: hidden;
+        }
+    }
+
+    &__animate {
+        display: inline-block;
+        width: fit-content;
+        white-space: nowrap;
+        animation: scrollBottom 3s linear infinite;
+
+        &::before {
+            content: 'Page Top';
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateX(110%);
+        }
+    }
+
+    &__arrow {
+        width: 12vmin;
+        max-width: 80px;
+        height: 12vmin;
+        max-height: 80px;
+    }
+
+    &__link {
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            transform: rotate(180deg);
+            background: url(../images/arrow.svg) center center / contain;
+            transition: .5s;
+
+            @include pc {
+                transform: rotate(90deg);
+            }
+        }
+
+        &:hover::before {
+            @include pc {
+                transform: rotate(90deg) translateY(10px);
+            }
+        }
+
+    }
+
+
+}

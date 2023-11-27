@@ -1,0 +1,81 @@
+// settingフォルダの変数を読み込みます
+
+@use "../setting" as *;
+
+
+@mixin tab ($width: 768px) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin pc ($width: 1024px) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin linkBg {
+  color: transparent;
+  background: linear-gradient(to right, $colorB 50%, $colorMain 50%);
+  -webkit-background-clip: text;
+  background-size: 200% 100%;
+  transition: 0.3s;
+
+  &:hover {
+    @include pc {
+      background-position: -100% 0;
+
+    }
+  }
+}
+
+
+@mixin link {
+  position: relative;
+  width: 100%;
+  color: $colorB;
+  font-size: 6vw;
+  font-family: $EBfont;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+
+  @include tab {
+    font-size: 4.5vw;
+  }
+
+  @include pc {
+    font-size: 2.5vw;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url(../images/arrow-link.svg) center center / contain;
+    transition: 0.3s;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, $colorB 50%, $colorMain 50%);
+    background-size: 200% 100%;
+    transition: 0.3s;
+  }
+
+  &:hover::after {
+    @include pc {
+      background-position: -100% 0;
+    }
+  }
+}
+
