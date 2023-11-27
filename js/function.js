@@ -211,7 +211,7 @@ const bg = () => {
     const boxTop = contactBox.getBoundingClientRect().top;
     const scrollY = window.scrollY;
     scrollY >= (boxTop - (bgHeight / 2)) + scrollY ? contactBg.classList.add('passive') : contactBg.classList.remove('passive');
-    scrollY >= (boxTop - (bgHeight / 3)) + scrollY ? contactTtl.classList.add('passive') : contactTtl.classList.remove('passive');
+    scrollY >= (boxTop - (bgHeight / 2.5)) + scrollY ? contactTtl.classList.add('passive') : contactTtl.classList.remove('passive');
 }
 window.addEventListener('scroll', () => {
     mvToggle();

@@ -70,8 +70,8 @@
             width: 100%;
             display: none;
             fill: rgb(241, 236, 232);
-            -webkit-mask: url("#mask__mv");
-            mask: url("#mask__mv");
+            -webkit-mask: url(#mask__mv);
+            mask: url(#mask__mv);
         }
 
         &__video {
