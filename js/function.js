@@ -5,15 +5,7 @@ const svg = document.querySelector('#svg');
 const mvTxt = document.querySelector('#mv__txt');
 const mvCr = document.querySelector('#mv__cr');
 const mvWrap = document.querySelector('#mv__leftWrap');
-<<<<<<< HEAD
-<<<<<<< HEAD
 const removeClass = () => {
-=======
-function removeClass() {
->>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
-=======
-function removeClass() {
->>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
     header.classList.remove('opacity-js');
     mvContainer.classList.remove('op-js');
     mvTxt.classList.remove('color-js');
@@ -23,18 +15,8 @@ function removeClass() {
 };
 const tab = window.matchMedia('(min-width: 768px)');
 const pc = window.matchMedia('(min-width: 1024px)');
-<<<<<<< HEAD
-<<<<<<< HEAD
 const opArry = ['5', '21', '14.3'];//op文字 x軸移動数値
 const op = () => {
-=======
-const opArry = ['5', '17', '13'];//op文字 x軸移動数値
-function op() {
->>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
-=======
-const opArry = ['5', '17', '13'];//op文字 x軸移動数値
-function op() {
->>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
     window.scroll({ top: 0 });
     const opmoveX = () => pc.matches ? opArry[2] : (tab.matches ? opArry[1] : opArry[0]);
     const optl = gsap.timeline();
@@ -63,26 +45,6 @@ window.addEventListener('DOMContentLoaded', () => {
     visitedFlg ? removeClass() : op();
 });
 //mv-gsap
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
-function mvToggle() {
-    const scrollY = window.scrollY;
-    if (scrollY > headerTop + 50) {
-        mvContainer.classList.remove('bg-js');
-        header.classList.remove('border-js');
-    } else {
-        mvContainer.classList.add('bg-js');
-        header.classList.add('border-js');
-    }
-};
-window.addEventListener('scroll', () => { mvToggle() });
-<<<<<<< HEAD
->>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
-=======
->>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
 const mvScale = divi => inWidth / divi;
 // const transOrigin = () => inWidth * .405;
 const mvtl = gsap.timeline({
@@ -212,17 +174,7 @@ ScrollTrigger.create({
     end: `+=${inHeight}`,
     scrub: true,
     pin: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
 })
-=======
-    delay: .8,
-});
->>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
-=======
-    delay: .8,
-});
->>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
 let resizeTimer;
 const resizeTimeout = () => {
     clearTimeout(resizeTimer);
@@ -231,8 +183,6 @@ const resizeTimeout = () => {
     }, 500);
 };
 window.addEventListener('resize', () => { resizeTimeout(); });
-<<<<<<< HEAD
-<<<<<<< HEAD
 const headerR = document.querySelector('#header__right');
 const footer = document.querySelector('#footer');
 const footerH = footer.offsetHeight;
@@ -269,68 +219,6 @@ window.addEventListener('scroll', () => {
     bg();
 });
 const mvLink = document.querySelector('#mv__link');
-=======
-const footer = document.querySelector('#footer');
-const headerR = document.querySelector('#header__right');
-const contactT = contact.getBoundingClientRect().top + window.scrollY;
-const footerH = footer.offsetHeight;
-const contactB = contact.getBoundingClientRect().bottom + window.scrollY - footerH;
-function contactBtnToggle() {
-    const scrollY = window.scrollY;
-    scrollY > contactT && scrollY < contactB ? headerR.classList.add('passive') : headerR.classList.remove('passive');
-}
-window.addEventListener('scroll', () => { contactBtnToggle() });
-const mvLink = document.querySelector('#mv__link');
-function smoothScroll(base, menu = null) {
-    const href = base.getAttribute('href');
-    const target = document.querySelector(href);
-    const targetTop = target.getBoundingClientRect().top;
-    const scrollY = window.scrollY;
-    const targetPos = targetTop + scrollY;
-    if (!menu) {
-        window.scrollTo({
-            top: targetPos,
-            behavior: 'smooth'
-        });
-    } else {
-        menu.scrollTo({
-            top: targetPos,
-            behavior: 'smooth'
-        });
-    }
-};
->>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
-=======
-const footer = document.querySelector('#footer');
-const headerR = document.querySelector('#header__right');
-const contactT = contact.getBoundingClientRect().top + window.scrollY;
-const footerH = footer.offsetHeight;
-const contactB = contact.getBoundingClientRect().bottom + window.scrollY - footerH;
-function contactBtnToggle() {
-    const scrollY = window.scrollY;
-    scrollY > contactT && scrollY < contactB ? headerR.classList.add('passive') : headerR.classList.remove('passive');
-}
-window.addEventListener('scroll', () => { contactBtnToggle() });
-const mvLink = document.querySelector('#mv__link');
-function smoothScroll(base, menu = null) {
-    const href = base.getAttribute('href');
-    const target = document.querySelector(href);
-    const targetTop = target.getBoundingClientRect().top;
-    const scrollY = window.scrollY;
-    const targetPos = targetTop + scrollY;
-    if (!menu) {
-        window.scrollTo({
-            top: targetPos,
-            behavior: 'smooth'
-        });
-    } else {
-        menu.scrollTo({
-            top: targetPos,
-            behavior: 'smooth'
-        });
-    }
-};
->>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
 mvLink.addEventListener('click', (e) => {
     e.preventDefault();
     smoothScroll(mvLink);

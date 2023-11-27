@@ -452,32 +452,18 @@
             left: 50%;
             transform: translate(-50%, -50%);
             color: #000;
-<<<<<<< HEAD
-<<<<<<< HEAD
             background: $colorY;
-=======
-            background: #fff;
->>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
-=======
-            background: #fff;
->>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
             text-decoration: none;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-<<<<<<< HEAD
-<<<<<<< HEAD
             border: 1px solid #000;
             transition: .4s;
 
             &:hover {
                 background: #f4f4f4;
             }
-=======
->>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
-=======
->>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
 
             @include tab {
                 width: 22vmin;
@@ -519,8 +505,6 @@
                 }
             }
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         &__wss {
             position: absolute;
@@ -538,22 +522,18 @@
             will-change: transform;
 
         }
+
         &__img {
             &-wss {
                 aspect-ratio: 2.5 / 1;
             }
-    
+
             &-azito {
                 aspect-ratio: 6 / 1;
-    
-                &:hover {
-                    background: url(images/work-wss_small.jpg) no-repeat top center / cover;
-                }
+
             }
-=======
-=======
->>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
-        
+        }
+
         &__img {
             display: block;
             width: 100%;
@@ -562,10 +542,6 @@
             object-position: top;
             will-change: transform;
             border: 1px solid #000;
-<<<<<<< HEAD
->>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
-=======
->>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
         }
 
         &__bottom {
@@ -627,16 +603,9 @@
         &__video {
             width: 100%;
             height: 100dvh;
-<<<<<<< HEAD
-<<<<<<< HEAD
             object-fit: cover;
             pointer-events: none;
             position: absolute;
-=======
-=======
->>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
-            background: url(../images/contact_sp.jpg) no-repeat center center / cover;
->>>>>>> 7589fa7365d1cbd5b65b41aba5b6d099d05b8f49
             z-index: -1;
 
             @include tab {
