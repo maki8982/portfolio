@@ -4,7 +4,7 @@
 
 .menu-active {
     opacity: 1;
-    z-index: 1;
+    z-index: 5;
     pointer-events: all;
 }
 
@@ -30,6 +30,8 @@
 
 .bg-js {
     background: rgba(146, 146, 146, 0.6);
+    z-index: 2;
+    pointer-events: all;
 }
 
 .slide-js {

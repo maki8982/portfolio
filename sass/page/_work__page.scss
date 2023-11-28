@@ -170,6 +170,7 @@
             }
         }
 
+        &__concept,
         &__txt {
             font-size: 14px;
             width: 78%;
@@ -185,14 +186,32 @@
                 padding-top: 26px;
             }
 
+        }
+
+        &__concept {
             span {
                 display: block;
-
-                @include tab {
-                    display: inline-block;
-                }
+                font-size: .9rem;
             }
         }
+
+        &__fontInner {
+            display: block;
+
+            @include pc{
+                display: inline;
+            }
+        }
+
+        &__font {
+            padding-right: 10px;
+
+            @include tab {
+                display: inline;
+                padding-right: 13px;
+            }
+        }
+
 
         &__color {
             display: flex;
@@ -216,39 +235,6 @@
                     width: 10.5rem;
                     font-size: 19px;
                 }
-            }
-
-        }
-        &__wssColor {
-
-            &:nth-of-type(1) {
-                background: #F6F6F6;
-                color: #000;
-
-            }
-
-            &:nth-of-type(2) {
-                background: #436CD0;
-                color: #fff;
-
-            }
-
-            &:nth-of-type(3) {
-                background: #00CFFF;
-                color: #000;
-
-            }
-        }
-
-        &__wssFont {
-            &:nth-of-type(1) {
-                font-family: 'Noto Sans JP', sans-serif;
-
-            }
-
-            &:nth-of-type(2) {
-                font-family: 'Lato', sans-serif;
-
             }
         }
 
@@ -337,39 +323,42 @@
 
         &__bottomWrap {
             width: 100%;
+            height: 7vw;
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            @include tab {
+                height: 65px;
+            }
+
+            @include pc {
+                height: 70px;
+            }
         }
 
         &__linkTxt--01 {
             width: 51px;
-            height: 36px;
 
             @include tab {
                 width: 77px;
-                height: 51px;
 
             }
 
             @include pc {
                 width: 18.25vw;
-                height: 72px;
             }
         }
 
         &__linkTxt--02 {
-            width: 170px;
-            height: 36px;
+            width: 35vw;
 
             @include tab {
                 width: 270px;
-                height: 51px;
             }
 
             @include pc {
                 width: 18.25vw;
-                height: 72px;
 
             }
         }
@@ -404,7 +393,6 @@
 
         &__linkNext {
             @include link;
-
             font-size: 17px;
 
             @include tab {
@@ -423,11 +411,21 @@
         &__link--02 {
             @include link;
             justify-content: center;
+            font-size: 1.1rem;
+            height: 100%;
 
+            @include tab(500px) {
+                font-size: 1.5rem;
+
+            }
+            
             @include pc {
                 justify-content: space-between;
                 align-self: center;
-                height: 100%;
+                font-size: 2rem;
+            }
+            @include pc(1400px) {
+                font-size: 2.8rem;
             }
 
             &::before {
@@ -439,6 +437,93 @@
                     width: 13px;
                     height: 7px;
                     background: url(../images/backicon.svg) center center / contain;
+                }
+            }
+        }
+    }
+
+    .wss {
+        .work {
+            &__colorSpan {
+                &:nth-of-type(1) {
+                    background: #F6F6F6;
+                    color: #000;
+
+                }
+
+                &:nth-of-type(2) {
+                    background: #436CD0;
+                    color: #fff;
+
+                }
+
+                &:nth-of-type(3) {
+                    background: #00CFFF;
+                    color: #000;
+
+                }
+            }
+
+            &__font {
+                &:nth-of-type(1) {
+                    font-family: 'Noto Sans JP', sans-serif;
+
+                }
+
+                &:nth-of-type(2) {
+                    font-family: 'Lato', sans-serif;
+
+                }
+            }
+        }
+    }
+
+    .azito {
+        .work {
+            &__colorSpan {
+                &:nth-of-type(1) {
+                    background: #F3F6FA;
+                    color: #000;
+
+                }
+
+                &:nth-of-type(2) {
+                    background: #F5F5EF;
+                    color: #000;
+
+                }
+
+                &:nth-of-type(3) {
+                    background: #505096;
+                    color: #fff;
+
+                }
+            }
+
+            &__font {
+                &:nth-of-type(1) {
+                    font-family: 'Yu Mincho', sans-serif;
+
+                }
+
+                &:nth-of-type(2) {
+                    font-family: 'Volkhov', serif;
+
+                }
+
+                &:nth-of-type(3) {
+                    font-family: $EBfont;
+
+                }
+
+                &:nth-of-type(4) {
+                    font-family: 'Lato', sans-serif;
+
+                }
+
+                &:nth-of-type(5) {
+                    font-family: 'Roboto', sans-serif;
+
                 }
             }
         }

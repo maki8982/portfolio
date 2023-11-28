@@ -15,7 +15,7 @@ const removeClass = () => {
 };
 const tab = window.matchMedia('(min-width: 768px)');
 const pc = window.matchMedia('(min-width: 1024px)');
-const opArry = ['5', '21', '14.3'];//op文字 x軸移動数値
+const opArry = ['8', '21', '14.3'];//op文字 x軸移動数値
 const op = () => {
     window.scroll({ top: 0 });
     const opmoveX = () => pc.matches ? opArry[2] : (tab.matches ? opArry[1] : opArry[0]);

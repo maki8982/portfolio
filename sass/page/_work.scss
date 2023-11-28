@@ -70,7 +70,7 @@
             &:hover {
                 @include pc {
                     .work__img {
-                        scale: .98;
+                        scale: 1.05;
                     }
                 }
             }
@@ -97,6 +97,7 @@
         &__pic {
             position: relative;
             margin-bottom: 29px;
+            overflow: hidden;
         }
 
         &__img {

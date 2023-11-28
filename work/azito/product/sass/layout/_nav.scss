@@ -6,8 +6,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 320px;
-    padding: 50px 20px 50px 20px;
+    padding: 138px 172px 90px;
     background: #fff;
     pointer-events: none;
     opacity: 0;
@@ -16,26 +15,30 @@
 
     &__nav {
         font-family: $EBfont;
-        margin-bottom: 50px;
+        margin-bottom: 70px;
+
     }
 
     &__list {
+        text-align: center;
         margin-bottom: 15px;
     }
 
     &__link {
-        display: block;
+        position: relative;
+        display: inline-block;
         padding: 10px;
         font-size: 18px;
         letter-spacing: 0.1em;
         color: #000;
         text-decoration: none;
+
+        @include navLink;
     }
 
     &__btn {
         width: 250px;
-        padding: 15px 36px;
-        border: 1px solid #000;
+
     }
     &__reserve {
         display: block;
@@ -43,6 +46,14 @@
         text-decoration: none;
         text-align: center;
         color: #000;
+        transition: .3s;
+        padding: 15px 36px;
+        @include boxBtn;
+
+        &:hover {
+            color: #fff;
+        }
+
         span {
             display: block;
             font-size: 18px;
@@ -69,10 +80,12 @@
     }
 
     &__link {
-        display: block;
-        padding: 10px;
+        position: relative;
+        display: inline-block;
+        padding: 10px 15px 5px;
         text-decoration: none;
         color: #000;
+        @include navLink;
     }
 
 }

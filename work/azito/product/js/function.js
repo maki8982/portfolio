@@ -18,6 +18,14 @@ $(function () {
             }
         });
     })
+    $('.gnav__bg').on('click', () => {
+        $('#gnav').removeClass('menu-active');
+        $('#header__btnTop').removeClass('btn-top')
+        $('#header__btnMiddle').removeClass('btn-middle');
+        $('#header__btnBottom').removeClass('btn-bottom');
+        $('body').removeClass('fixed-js');
+        $('#gnav__bg').removeClass('bg-js');
+    })
     $(window).on('load', () => {
         $('.slide-opjs').addClass('slide-active');
     })

@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 1;
+    z-index: 15;
     pointer-events: none;
 
     &__ttl {
@@ -31,7 +31,7 @@
         width: 55px;
         height: 55px;
         position: relative;
-        z-index: 2;
+        z-index: 10;
         background: #fff;
         border: 1px solid #000;
         border-radius: 50%;
