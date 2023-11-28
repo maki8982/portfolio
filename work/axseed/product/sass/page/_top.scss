@@ -1,0 +1,277 @@
+//各ファイルは必ず登録済みの変数を最初に読み込みます
+//as *で読み込みファイル名を省略することができます
+@use "../global" as *;
+
+#top {
+    .wrapper {
+        &__bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100dvh;
+            background: #f3f3f3;
+        }
+
+        &__border {
+            @include pc {
+                display: flex;
+                height: 100%;
+                position: absolute;
+                width: 100%;
+                z-index: -1;
+
+                span {
+                    border-right: 1px solid #efefef;
+                    height: 100%;
+                    width: 20%;
+                }
+
+            }
+
+
+        }
+    }
+
+    .main {
+        position: relative;
+        z-index: 1;
+    }
+
+    .mv {
+        width: 100vw;
+        height: 100dvh;
+        background: url(../images/mv_poster.jpg) no-repeat 10% center / cover;
+
+        &__video {
+            display: none;
+        }
+
+    }
+
+    .fv {
+        &__bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100dvh;
+            background: rgba(0, 0, 0, 0.2);
+
+        }
+
+        &__header {
+            padding: 18px 25px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+        }
+
+        &__ttl {
+            width: 40px;
+        }
+
+        &__link {
+            display: block;
+        }
+
+        &__logo {
+            width: 100%;
+        }
+
+        &__sub {
+            letter-spacing: 0.1em;
+            font-size: 14px;
+            font-weight: normal;
+        }
+
+        &__box {
+            width: 100%;
+            height: 100dvh;
+            padding-left: 8%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            z-index: 5;
+        }
+        
+        &__txt {
+            font-size: 46px;
+            font-family: $popfont;
+            color: #fff;
+            font-weight: 100;
+            line-height: 1.3;
+
+            span {
+                display: block;
+                font-size: 12px;
+                font-family: $notofont;
+            }
+        }
+
+        &__bottom {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 60px;
+            height: 60px;
+            z-index: 3;
+            background: #4BCBA4;
+        }
+
+        &__border {
+            display: block;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 1px;
+                height: 40px;
+                background: #fff;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 10%;
+                left: 50%;
+                transform: translateX(-50%);
+                display: block;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background: #fff;
+
+            }
+        }
+
+        &__news {
+            display: flex;
+            align-items: center;
+            background: #fff;
+
+        }
+
+        &__newsSub {
+            font-family: $popfont;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 20px 18px;
+            letter-spacing: 0.1em;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+
+            &::after {
+                content: '';
+                width: 1px;
+                height: 35px;
+                background: #ddd;
+            }
+        }
+
+        &__newsLink {
+            color: #000;
+            text-decoration: none;
+        }
+
+
+        &__newsBox {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__newsDate {
+            font-size: 12px;
+            color: #414141;
+            letter-spacing: 0.1em;
+
+            span {
+                display: block;
+                font-size: 11px;
+                color: #B1B1B1;
+            }
+        }
+    }
+
+    .about {
+        position: relative;
+        margin-bottom: 60px;
+        &__container {
+            &:nth-child(1) {
+                position: relative;
+            }
+
+            &:nth-child(2) {
+                position: relative;
+                margin-left: auto;
+                margin-top: -42dvh;
+                padding: 10.3vw;
+                width: 92vw;
+                z-index: 2;
+                background: #fff;
+
+            }
+        }
+
+        &__cube {
+            background: #000;
+            width: 100%;
+            height: 68.5dvh;
+        }
+
+        &__pic {
+            width: 84vw;
+            height: 57vw;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            background: url(../images/pho_top_01_pc.png) no-repeat center center / cover;
+        }
+
+        &__img {
+            display: block;
+        }
+
+        &__ttl {
+            font-size: 30px;
+            font-weight: 100;
+            letter-spacing: 0.1em;
+            margin-bottom: 22px;
+        }
+
+        &__txt {
+            font-size: 12px;
+            line-height: 2;
+            font-weight: 200;
+        }
+    }
+
+    .concept {
+        &__container {
+            background: url(../images/pho_top_02_sp.jpg) no-repeat center center / contain;
+        }
+
+        &__pic {
+            width: 100%;
+            height: 60vw;
+
+        }
+
+        &__img {
+            object-fit: contain;
+        }
+    }
+}
