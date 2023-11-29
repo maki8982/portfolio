@@ -508,7 +508,8 @@
 
 
         &__img-wss,
-        &__img-azito {
+        &__img-azito,
+        &__img-todo {
             display: block;
             width: 100%;
             pointer-events: none;
@@ -523,7 +524,9 @@
 
             &-azito {
                 aspect-ratio: 6 / 1;
-
+            }
+            &-todo {
+                aspect-ratio: 2 / 1;
             }
         }
 
