@@ -5,6 +5,10 @@ const svg = document.querySelector('#svg');
 const mvTxt = document.querySelector('#mv__txt');
 const mvCr = document.querySelector('#mv__cr');
 const mvWrap = document.querySelector('#mv__leftWrap');
+const tab = window.matchMedia('(min-width: 768px)');
+const pc = window.matchMedia('(min-width: 1024px)');
+const opArry = ['8', '21', '14.3'];//op文字 x軸移動数値
+
 const removeClass = () => {
     header.classList.remove('opacity-js');
     mvContainer.classList.remove('op-js');
@@ -13,12 +17,18 @@ const removeClass = () => {
     mvWrap.classList.remove('opacity-js');
     body.classList.remove('over-h');
 };
-const tab = window.matchMedia('(min-width: 768px)');
-const pc = window.matchMedia('(min-width: 1024px)');
-const opArry = ['8', '21', '14.3'];//op文字 x軸移動数値
+
 const op = () => {
     window.scroll({ top: 0 });
-    const opmoveX = () => pc.matches ? opArry[2] : (tab.matches ? opArry[1] : opArry[0]);
+    const opmoveX = () => {
+        if(pc.matches) {
+            return opArry[2];
+        } else if (tab.matches) {
+            opArry[1]
+         } else {
+            opArry[0];
+         }
+    }
     const optl = gsap.timeline();
     optl.fromTo('.mv__svg01', {
         x: '2%',
@@ -44,6 +54,7 @@ window.addEventListener('DOMContentLoaded', () => {
     svg.classList.remove('opacity-js');
     visitedFlg ? removeClass() : op();
 });
+
 //mv-gsap
 const mvScale = divi => inWidth / divi;
 // const transOrigin = () => inWidth * .405;
@@ -69,6 +80,7 @@ mvtl.to('.mv__svg01, .mv__txt, .mv__left', {
         ease: 'power4.inOut',
         duration: 15,
     });
+
 //about-gsap
 const scroller = () => tab.matches ? inHeight * 1.48 : inHeight;
 ScrollTrigger.create({
@@ -79,6 +91,7 @@ ScrollTrigger.create({
     pin: true,
     pinSpacing: false,
 });
+
 //work-gsap
 const workContainer = document.querySelector('#work__container');
 const workHeight = workContainer.offsetHeight;
@@ -152,6 +165,7 @@ if (pc.matches) {
             x: `${cardYX(-24)}%`,
         }, '<');
 }
+
 // contact-gsap
 const contact = document.querySelector('#contact-sec');
 const contactHeight = contact.offsetHeight;
@@ -175,6 +189,7 @@ ScrollTrigger.create({
     scrub: true,
     pin: true,
 })
+
 let resizeTimer;
 const resizeTimeout = () => {
     clearTimeout(resizeTimer);
@@ -182,6 +197,7 @@ const resizeTimeout = () => {
         if (innerWidth !== inWidth) { location.reload(); }
     }, 500);
 };
+
 window.addEventListener('resize', () => { resizeTimeout(); });
 const headerR = document.querySelector('#header__right');
 const footer = document.querySelector('#footer');
@@ -197,12 +213,14 @@ const mvToggle = () => {
         header.classList.add('border-js');
     }
 };
+
 const contactBtnToggle = () => {
     const scrollY = window.scrollY;
     const contactT = contact.getBoundingClientRect().top;
     const contactB = contact.getBoundingClientRect().bottom;
     scrollY > contactT + scrollY && scrollY < contactB + window.scrollY - footerH ? headerR.classList.add('passive') : headerR.classList.remove('passive');
 }
+
 const contactBox = document.querySelector('#contact__box--01');
 const contactBg = document.querySelector('#contact__bg');
 const contactTtl = document.querySelector('#contact__ttl');
@@ -213,11 +231,13 @@ const bg = () => {
     scrollY >= (boxTop - (bgHeight / 2)) + scrollY ? contactBg.classList.add('passive') : contactBg.classList.remove('passive');
     scrollY >= (boxTop - (bgHeight / 2.5)) + scrollY ? contactTtl.classList.add('passive') : contactTtl.classList.remove('passive');
 }
+
 window.addEventListener('scroll', () => {
     mvToggle();
     contactBtnToggle();
     bg();
 });
+
 const mvLink = document.querySelector('#mv__link');
 mvLink.addEventListener('click', (e) => {
     e.preventDefault();
