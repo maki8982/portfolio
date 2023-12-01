@@ -7,7 +7,6 @@ const mvCr = document.querySelector('#mv__cr');
 const mvWrap = document.querySelector('#mv__leftWrap');
 const tab = window.matchMedia('(min-width: 768px)');
 const pc = window.matchMedia('(min-width: 1024px)');
-const opArry = ['8', '21', '14.3'];//op文字 x軸移動数値
 
 const removeClass = () => {
     header.classList.remove('opacity-js');
@@ -18,17 +17,18 @@ const removeClass = () => {
     body.classList.remove('over-h');
 };
 
+const opArry = ['8', '21', '14.3'];//op文字 x軸移動数値
 const op = () => {
     window.scroll({ top: 0 });
     const opmoveX = () => {
         if(pc.matches) {
             return opArry[2];
         } else if (tab.matches) {
-            opArry[1]
+            return opArry[1];
          } else {
-            opArry[0];
+            return opArry[0];
          }
-    }
+    };
     const optl = gsap.timeline();
     optl.fromTo('.mv__svg01', {
         x: '2%',
@@ -228,9 +228,17 @@ const bgHeight = contactBg.offsetHeight;
 const bg = () => {
     const boxTop = contactBox.getBoundingClientRect().top;
     const scrollY = window.scrollY;
-    scrollY >= (boxTop - (bgHeight / 2)) + scrollY ? contactBg.classList.add('passive') : contactBg.classList.remove('passive');
-    scrollY >= (boxTop - (bgHeight / 2.5)) + scrollY ? contactTtl.classList.add('passive') : contactTtl.classList.remove('passive');
-}
+    if(scrollY >= (boxTop - (bgHeight / 2)) + scrollY) {
+        contactBg.classList.add('passive');
+    } else {
+        contactBg.classList.remove('passive');
+    }
+    if(scrollY >= (boxTop - (bgHeight / 2.5)) + scrollY) {
+        contactTtl.classList.add('passive');
+    } else {
+        contactTtl.classList.remove('passive');
+    }
+};
 
 window.addEventListener('scroll', () => {
     mvToggle();
@@ -242,4 +250,4 @@ const mvLink = document.querySelector('#mv__link');
 mvLink.addEventListener('click', (e) => {
     e.preventDefault();
     smoothScroll(mvLink);
-})
+});

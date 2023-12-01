@@ -509,7 +509,8 @@
 
         &__img-wss,
         &__img-azito,
-        &__img-todo {
+        &__img-todo,
+        &__img-lloyds {
             display: block;
             width: 100%;
             pointer-events: none;
@@ -527,6 +528,9 @@
             }
             &-todo {
                 aspect-ratio: 2 / 1;
+            }
+            &-lloyds {
+                aspect-ratio: 3 / 1;
             }
         }
 

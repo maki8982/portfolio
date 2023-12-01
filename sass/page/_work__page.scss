@@ -463,18 +463,6 @@
 
                 }
             }
-
-            &__font {
-                &:nth-of-type(1) {
-                    font-family: 'Noto Sans JP', sans-serif;
-
-                }
-
-                &:nth-of-type(2) {
-                    font-family: 'Lato', sans-serif;
-
-                }
-            }
         }
     }
 
@@ -499,31 +487,32 @@
 
                 }
             }
-
-            &__font {
+        }
+    }
+    
+    .portfolio {
+        .work{
+            &__pic {
+                border: 1px solid #909090;
+            }
+            &__colorSpan {
                 &:nth-of-type(1) {
-                    font-family: 'Yu Mincho', sans-serif;
-
+                    background: $colorY;
+                    color: #000;
+                    border: 1px solid #909090;
+    
                 }
-
+    
                 &:nth-of-type(2) {
-                    font-family: 'Volkhov', serif;
-
+                    background: $colorMain;
+                    color: #000;
+    
                 }
-
+    
                 &:nth-of-type(3) {
-                    font-family: $EBfont;
-
-                }
-
-                &:nth-of-type(4) {
-                    font-family: 'Lato', sans-serif;
-
-                }
-
-                &:nth-of-type(5) {
-                    font-family: 'Roboto', sans-serif;
-
+                    background: $colorOrange;
+                    color: #fff;
+    
                 }
             }
         }

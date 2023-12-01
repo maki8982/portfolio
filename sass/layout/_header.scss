@@ -33,7 +33,7 @@
         &::before {
             content: '';
             display: block;
-            background: #F04B00;
+            background: $colorOrange;
             border-radius: 50%;
             position: absolute;
             z-index: -1;
@@ -312,10 +312,6 @@
             margin-bottom: 0;
         }
 
-        &:nth-of-type(3) {
-            border: 1px #000 solid;
-        }
-
         &:last-of-type {
             margin-bottom: 42px;
 
@@ -330,13 +326,18 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: top left   ;
+        object-position: top center;
         aspect-ratio: 4 / 3;
         background: #fff;
 
         @include pc {
             aspect-ratio: 1.56 / 2;
         }
+    }
+    
+    &__todo {
+        border: 1px #000 solid;
+        object-position: top left;
     }
 
     &__return {
