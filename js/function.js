@@ -44,14 +44,15 @@ const op = () => {
             x: `${opmoveX()}%`,
             opacity: 1,
         });
-    body.classList.add('over-h');
     mvContainer.classList.add('op-js');
     sessionStorage.setItem('visited', 'true');
     setTimeout(() => { removeClass(); }, 3300);
 };
+const opBg = document.querySelector('#op-bg');
 window.addEventListener('DOMContentLoaded', () => {
     const visitedFlg = sessionStorage.getItem('visited');
     svg.classList.remove('opacity-js');
+    opBg.classList.add('display-none');
     visitedFlg ? removeClass() : op();
 });
 
@@ -218,7 +219,7 @@ const contactBtnToggle = () => {
     const scrollY = window.scrollY;
     const contactT = contact.getBoundingClientRect().top;
     const contactB = contact.getBoundingClientRect().bottom;
-    scrollY > contactT + scrollY && scrollY < contactB + window.scrollY - footerH ? headerR.classList.add('passive') : headerR.classList.remove('passive');
+    scrollY > contactT + scrollY && scrollY < contactB + window.scrollY - footerH ? headerR.classList.add('hide') : headerR.classList.remove('hide');
 }
 
 const contactBox = document.querySelector('#contact__box--01');
@@ -229,14 +230,14 @@ const bg = () => {
     const boxTop = contactBox.getBoundingClientRect().top;
     const scrollY = window.scrollY;
     if(scrollY >= (boxTop - (bgHeight / 2)) + scrollY) {
-        contactBg.classList.add('passive');
+        contactBg.classList.add('hide');
     } else {
-        contactBg.classList.remove('passive');
+        contactBg.classList.remove('hide');
     }
     if(scrollY >= (boxTop - (bgHeight / 2.5)) + scrollY) {
-        contactTtl.classList.add('passive');
+        contactTtl.classList.add('hide');
     } else {
-        contactTtl.classList.remove('passive');
+        contactTtl.classList.remove('hide');
     }
 };
 

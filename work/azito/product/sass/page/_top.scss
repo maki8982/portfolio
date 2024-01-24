@@ -23,14 +23,27 @@
         &__wrap {
             width: 72vw;
             height: 100%;
+            position: relative;
+        }
+
+        &__inner {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
             overflow: hidden;
+            animation: SlideRight 1.5s cubic-bezier(.4, 0, .2, 1) forwards;
+            transition: 1s forwards;
+
         }
 
         &__bg {
-            position: relative;
+            position: absolute;
+            left: 0;
             width: 100%;
             height: 100%;
             background: url(../images/mv.jpg) no-repeat left bottom / contain;
+            animation: SlideLeft 1.5s cubic-bezier(.4, 0, .2, 1) forwards;
 
         }
 
@@ -147,10 +160,19 @@
             overflow: hidden;
         }
 
+        &__slide {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            transform: translateX(-100%);
+        }
+
         &__img {
             @include img;
-            position: relative;
-            transition: .8s
+            position: absolute;
+            transition: .8s;
         }
 
         &__container--02 {
@@ -162,21 +184,35 @@
         }
     }
 
-    .middleTop {
-        height: 600px;
+    .topLeft {
+        width: 676px;
+        height: 715px;
     }
 
     .topRight {
+        width: 310px;
+        height: 567px;
+        object-fit: cover;
         position: absolute;
-        right: -12%;
+        right: 0%;
         bottom: -8%;
     }
 
     .middleLeft {
+        width: 710px;
+        height: 942px;
         margin-top: 10%;
     }
 
+    .middleTop {
+        width: 737px;
+        height: 600px;
+    }
+
+
     .middleRight {
+        width: 877px;
+        height: 556px;
         position: absolute;
         bottom: -25%;
         right: 0;
@@ -184,6 +220,7 @@
 
     .bottom {
         width: 994px;
+        height: 433px;
         margin-left: 265px;
     }
 
@@ -348,7 +385,7 @@
             &:hover::before {
                 transition: transform 0.3s;
                 transform: scaleY(1);
-                transform-origin: top left; 
+                transform-origin: top left;
             }
 
             &::after {

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="format-detection" content="telephone=no">
@@ -10,7 +11,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Noto+Serif+JP&family=Roboto:wght@300&family=Volkhov:wght@400;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -47,7 +48,9 @@
     <main class="main">
       <div class="mv">
         <div class="mv__wrap">
-          <div id="mv__bg" class="mv__bg"></div>
+          <div class="mv__inner" id="mv__inner">
+            <div id="mv__bg" class="mv__bg"></div>
+          </div>
         </div>
         <div class="mv__scroll">scroll<span class="mv__bar"></span></div>
       </div>
@@ -55,7 +58,11 @@
         <div class="about__wrap">
           <h2 class="about__ttl">About</h2>
           <div class="about__container--01">
-            <p class="about__pic topLeft"><span class="slide-js"></span><img src="images/top.jpg" alt="" class="about__img"></p>
+            <p class="about__pic topLeft">
+              <span class="about__slide">
+                <img src="images/top.jpg" alt="" class="about__img">
+              </span>
+            </p>
             <div class="about__box">
               <p class="about__sub">⾮⽇常で特別な時間を。 </p>
               <p class="about__txt">
@@ -72,15 +79,35 @@
               <p class="about__more"><a href="#" class="about__link">Read more</a>
               </p>
             </div>
-            <p class="about__pic topRight"><span class="slide-js"></span><img src="images/topRight.jpg" alt="" class="about__img"></p>
+            <p class="about__pic topRight">
+              <span class="about__slide">
+                <img src="images/topRight.jpg" alt="" class="about__img">
+              </span>
+            </p>
           </div>
         </div>
         <div class="about__container--02">
-          <p class="about__pic middleLeft"><span class="slide-js"></span><img src="images/middleLeft.jpg" alt="" class="about__img"></p>
-          <p class="about__pic middleTop"><span class="slide-js"></span><img src="images/middleTop.jpg" alt="" class="about__img"></p>
-          <p class="about__pic middleRight"><span class="slide-js"></span><img src="images/middleRight.jpg" alt="" class="about__img"></p>
+          <p class="about__pic middleLeft">
+            <span class="about__slide">
+              <img src="images/middleLeft.jpg" alt="" class="about__img">
+            </span>
+          </p>
+          <p class="about__pic middleTop">
+            <span class="about__slide">
+              <img src="images/middleTop.jpg" alt="" class="about__img">
+            </span>
+          </p>
+          <p class="about__pic middleRight">
+            <span class="about__slide">
+              <img src="images/middleRight.jpg" alt="" class="about__img">
+            </span>
+          </p>
         </div>
-        <p class="about__pic bottom"><span class="slide-js"></span><img src="images/bottom.jpg" alt="" class="about__img"></p>
+        <p class="about__pic bottom">
+          <span class="about__slide">
+            <img src="images/bottom.jpg" alt="" class="about__img">
+          </span>
+        </p>
       </section>
 
       <div class="menu">

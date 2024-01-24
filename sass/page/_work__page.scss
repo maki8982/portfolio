@@ -212,32 +212,6 @@
             }
         }
 
-
-        &__color {
-            display: flex;
-            width: 78%;
-            height: 1.8rem;
-
-            @include pc {
-                width: 100%;
-                padding-top: 12px;
-                height: 3.5rem;
-            }
-
-            span {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                height: 100%;
-
-                @include pc {
-                    width: 10.5rem;
-                    font-size: 19px;
-                }
-            }
-        }
-
         &__hoursContainer {
             width: 90vw;
             margin: 0 auto 36px;
@@ -437,82 +411,6 @@
                     width: 13px;
                     height: 7px;
                     background: url(../images/backicon.svg) center center / contain;
-                }
-            }
-        }
-    }
-
-    .wss {
-        .work {
-            &__colorSpan {
-                &:nth-of-type(1) {
-                    background: #F6F6F6;
-                    color: #000;
-
-                }
-
-                &:nth-of-type(2) {
-                    background: #436CD0;
-                    color: #fff;
-
-                }
-
-                &:nth-of-type(3) {
-                    background: #00CFFF;
-                    color: #000;
-
-                }
-            }
-        }
-    }
-
-    .azito {
-        .work {
-            &__colorSpan {
-                &:nth-of-type(1) {
-                    background: #F3F6FA;
-                    color: #000;
-
-                }
-
-                &:nth-of-type(2) {
-                    background: #F5F5EF;
-                    color: #000;
-
-                }
-
-                &:nth-of-type(3) {
-                    background: #505096;
-                    color: #fff;
-
-                }
-            }
-        }
-    }
-    
-    .portfolio {
-        .work{
-            &__pic {
-                border: 1px solid #909090;
-            }
-            &__colorSpan {
-                &:nth-of-type(1) {
-                    background: $colorY;
-                    color: #000;
-                    border: 1px solid #909090;
-    
-                }
-    
-                &:nth-of-type(2) {
-                    background: $colorMain;
-                    color: #000;
-    
-                }
-    
-                &:nth-of-type(3) {
-                    background: $colorOrange;
-                    color: #fff;
-    
                 }
             }
         }

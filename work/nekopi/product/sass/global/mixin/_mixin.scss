@@ -1,0 +1,14 @@
+// settingフォルダの変数を読み込みます
+
+@use "../setting" as *;
+@mixin tab ($width: 768px) {
+    @media screen and (min-width: $width) {
+      @content;
+    }
+  }
+  
+  @mixin pc ($width: 1024px) {
+    @media screen and (min-width: $width) {
+      @content;
+    }
+  }

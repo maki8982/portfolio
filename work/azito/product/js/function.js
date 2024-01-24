@@ -1,5 +1,5 @@
 $(function () {
-    function btnToggle() {
+    const btnToggle = () => {
         $('#gnav').toggleClass('menu-active');
         $('#header__btnTop').toggleClass('btn-top')
         $('#header__btnMiddle').toggleClass('btn-middle');
@@ -11,10 +11,16 @@ $(function () {
     const winH = $(window).height();
     $(window).on('scroll', function () {
         const scrollY = $(window).scrollTop();
-        $('.slide-js').each( function() {
+        $('.about__slide').each( function() {
             const targetTop = $(this).offset().top;
             if(scrollY > targetTop - winH * .8) {
-                $(this).addClass('slide-active')
+                $(this).addClass('slide-activeRight');
+            }
+        });
+        $('.about__img').each( function() {
+            const targetTop = $(this).offset().top;
+            if(scrollY > targetTop - winH * .8) {
+                $(this).addClass('slide-activeLeft');
             }
         });
     })
@@ -27,6 +33,7 @@ $(function () {
         $('#gnav__bg').removeClass('bg-js');
     })
     $(window).on('load', () => {
-        $('.slide-opjs').addClass('slide-active');
+        $('#mv__inner').addClass('slide-active');
+        $('#mv__bg').addClass('slide-active');
     })
 });

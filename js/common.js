@@ -47,6 +47,6 @@ const headerMenu = document.querySelector('#header__ul');
 const headerTop = header.getBoundingClientRect().top;
 const headerToggle = () => {
     const scrollY = window.scrollY;
-    scrollY > headerTop ? headerMenu.classList.add('passive') : headerMenu.classList.remove('passive');
+    scrollY > headerTop ? headerMenu.classList.add('hide') : headerMenu.classList.remove('hide');
 }
 window.addEventListener('scroll', () => { headerToggle() });

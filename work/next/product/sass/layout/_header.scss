@@ -3,7 +3,7 @@
 @use "../global" as *;
 
 .header {
-    padding: 30px 75px;
+    padding: 35px 60px;
     position: fixed;
     top: 0;
     left: 0;
@@ -15,15 +15,18 @@
     z-index: 1;
 
     &__ttl {
-        width: 120px;
-        height: 50px;
+        width: 290px;
+        height: 55px;
         pointer-events: all;
     }
 
     &__link {
         display: block;
+    }
+
+    &__img {
+        display: block;
         width: 100%;
         height: 100%;
-        background: #000;
     }
 }

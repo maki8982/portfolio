@@ -1,0 +1,190 @@
+//各ファイルは必ず登録済みの変数を最初に読み込みます
+//as *で読み込みファイル名を省略することができます
+@use "../global" as *;
+
+#top {
+    .fv {
+        margin-bottom: 115px;
+        position: relative;
+
+        &__mv {
+            position: relative;
+            width: 100vw;
+            height: 80vw;
+            background: url(../images/kv-sp.jpg) no-repeat 16% top / 100%;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: url(../images/anim-13fa0722.webp) no-repeat 50% -22% / 107%;;
+                z-index: 5;
+            }
+        }
+
+        &__wrap {
+            margin-top: -14%;
+            position: relative;
+            border-radius: 50px 50px 0 0;
+            background: #dedbd9;
+            z-index: 1;
+        }
+
+        &__ttl {
+            width: 60vw;
+            margin: 0 auto;
+            transform: translateY(-50%);
+        }
+
+        &__logo {
+            display: block;
+            width: 100%;
+        }
+
+        &__copy {
+            width: 65vw;
+            margin: 0 auto;
+            padding-left: 2rem;
+            color: #fff;
+            font-size: 6.5vw;
+            font-weight: 600;
+        }
+
+        &__middle {
+            position: absolute;
+            top: 15%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__left,
+        &__right {
+            position: relative;
+            display: block;
+            width: 22vw;
+            height: 17.5vw;
+            &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                width: 2rem;
+                height: 1.4rem;
+            }
+
+        }
+
+        &__left {
+            left: -1.5rem;
+            background: url(../images/shironeko-c238841d.png) center / contain no-repeat;
+
+            &::after {
+                right: 0.5rem;
+                bottom: -1.5rem;
+                background: url(../images/sweat-sp-b9b2dc0c.svg) no-repeat center / contain;
+            }
+        }
+
+        &__right {
+            right: -1.5rem;
+            background: url(../images/kuroneko-421a3adc.png) no-repeat center / contain;
+
+            &::after {
+                top: -0.5rem;
+                left: -0.8rem;
+                background: url(../images/bright-sp-57a843b3.svg) no-repeat center / contain;
+            }
+        }
+
+        &__ph {
+            width: 90vw;
+            height: 66vw;
+            margin: 75px auto;
+            position: relative;
+            border-radius: 45px;
+            background: url(../images/lead-pc-54a5b774.jpg) no-repeat 84% 2%/112%;
+            overflow: hidden;
+
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: url(../images/anim-4f3cca74.webp) no-repeat 82% 14% / 113%;
+                z-index: 5;
+            }
+        }
+    }
+
+    .about {
+        width: 90vw;
+        margin: 0 auto;
+        &__ttl {
+            position: relative;
+            margin-bottom: 50px;
+            color: #dedbd9;
+            -webkit-text-stroke: .1rem #bcb9b7;
+            font-size: 12vw;
+            font-family: $robofont;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+
+            &::after {
+                content: 'about';
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: translate(4px, 4px);
+                -webkit-text-stroke: 0 currentcolor;
+                color: #bcb9b7;
+                z-index: -1;
+
+            }
+        }
+
+        &__inner:nth-child(1) {
+            .about__pic {
+                position: relative;
+                transform: translateX(10%);
+    
+                &::before,
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 8.5rem;
+                    height: 7.5rem;
+                    position: absolute;
+                }
+                
+                &::before {
+                    top: -4rem;
+                    left: 1rem;
+                    transform: rotate(5deg);
+                    background: url(../images/rainy-2086b5c9.svg) no-repeat center / contain;
+                    
+                }
+                &::after {
+                    bottom: -4rem;
+                    right: 1rem;
+                    transform: rotate(5deg);
+                    background: url(../images/sunny-427dc140.svg) no-repeat center / contain;
+                    
+                }
+            }
+        }
+
+
+        &__img {
+            border-radius: 50%;
+            border: 2px solid #fff;
+        }
+    }
+}

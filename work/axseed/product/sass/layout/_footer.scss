@@ -1,3 +1,119 @@
 //各ファイルは必ず登録済みの変数を最初に読み込みます
 //as *で読み込みファイル名を省略することができます
 @use "../global" as *;
+
+.footer {
+    padding: 40px 30px 40px;
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/mv_poster.jpg) no-repeat 26% center / cover;
+    color: #fff;
+
+    &__box {
+        margin-bottom: 48px;
+    }
+
+    &__ttl {
+        width: 65px;
+        margin-bottom: 120px;
+    }
+
+    &__logo {
+        width: 100%;
+    }
+
+    &__sub {
+        margin-bottom: 15px;
+        font-size: 12px;
+        font-family: $popfont;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+    }
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        line-height: 2;
+
+    }
+
+    &__dt {
+        width: 33%;
+        opacity: 0.5;
+    }
+
+    &__dd {
+        width: 67%;
+        opacity: 0.8;
+    }
+
+    &__item--01 {
+        margin-bottom: 20px;
+    }
+
+    &__item--02 {
+        width: 100%;
+        padding-left: 33%;
+    }
+
+    &__link {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #50ba9d;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+    }
+
+    &__btn {
+        width: 100%;
+        margin-bottom: 20px;
+
+    }
+
+    &__contact {
+        padding: 25px;
+        position: relative;
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: #fff;
+            border-radius: 50%;
+            top: 50%;
+            right: 10%;
+            transform: translateY(-50%);
+        }
+
+        
+    }
+    
+    &__tel {
+        font-size: 42px;
+        font-family: $popfont;
+        font-weight: 100;
+    }
+
+    &__copy {
+        text-align: center;
+    }
+
+    &__small {
+        font-size: 12px;
+        opacity: .7;
+        
+    }
+    
+}

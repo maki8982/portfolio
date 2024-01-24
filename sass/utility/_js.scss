@@ -31,12 +31,25 @@
     overflow: hidden;
 }
 
-.passive {
+.hide {
     opacity: 0;
     pointer-events: none;
 }
 
+.display-none {
+    display: none;
+}
+
 #top {
+    .op-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100svh;
+        background: $colorY;
+        z-index: 100;
+    }
     .bg-js {
         background: $colorB;
         width: 100vw;
